@@ -1,11 +1,11 @@
-import { getRequestEvent } from "solid-js/web";
+import { getRequestEvent } from 'solid-js/web';
 
 export const getCookie = (key: string) => {
 	const RE = new RegExp(`${key}=(\\w+)`);
-	let cookies;
-	if (typeof window === "undefined") {
+	let cookies: string | null | undefined;
+	if (typeof window === 'undefined') {
 		const reqEvt = getRequestEvent();
-		cookies = reqEvt?.request.headers.get("Cookie");
+		cookies = reqEvt?.request.headers.get('Cookie');
 	} else {
 		cookies = document.cookie;
 	}

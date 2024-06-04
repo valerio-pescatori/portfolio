@@ -1,20 +1,20 @@
 // @refresh reload
-import { createHandler, StartServer } from "@solidjs/start/server";
-import { parse } from "accept-language-parser";
-import { Locales } from "./i18n/i18n-types";
-import { locales } from "./i18n/i18n-util";
-import { getCookie } from "../utils/getCookie";
+import { StartServer, createHandler } from '@solidjs/start/server';
+import { parse } from 'accept-language-parser';
+import { getCookie } from '../utils/getCookie';
+import type { Locales } from './i18n/i18n-types';
+import { locales } from './i18n/i18n-util';
 
 export default createHandler((context) => {
 	let lang: string;
-	const cookie = getCookie("lang");
+	const cookie = getCookie('lang');
 	if (cookie) {
 		lang = cookie;
 	} else {
-		const languanges = context.request.headers.get("accept-language");
+		const languanges = context.request.headers.get('accept-language');
 		const locale = ((languanges && parse(languanges)[0]?.code) ||
-			"en") as Locales;
-		lang = locales.includes(locale) ? locale : "en";
+			'en') as Locales;
+		lang = locales.includes(locale) ? locale : 'en';
 		context.locals = {
 			lang,
 		};
