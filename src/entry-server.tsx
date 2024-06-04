@@ -1,9 +1,9 @@
 // @refresh reload
 import { StartServer, createHandler } from '@solidjs/start/server';
 import { parse } from 'accept-language-parser';
-import { getCookie } from '../utils/getCookie';
 import type { Locales } from './i18n/i18n-types';
 import { locales } from './i18n/i18n-util';
+import { getCookie } from './utils/getCookie';
 
 export default createHandler((context) => {
 	let lang: string;
