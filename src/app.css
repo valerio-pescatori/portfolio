@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+	@font-face {
+		font-family: "SourceCodePro";
+		src: local("SourceCodePro"), url("/SourceCodePro.ttf");
+	}
+
 	a {
 		@apply hover:underline;
 	}

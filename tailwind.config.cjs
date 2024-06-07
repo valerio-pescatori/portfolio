@@ -3,6 +3,10 @@ import { flavors } from "@catppuccin/palette";
 module.exports = {
 	content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
 	theme: {
+		fontFamily: {
+			sans: ["SourceCodePro"],
+		},
+
 		extend: {},
 	},
 	plugins: [require("@catppuccin/tailwindcss")],
