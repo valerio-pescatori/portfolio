@@ -26,11 +26,14 @@ export default function App() {
 	loadLocale(lang);
 
 	return (
-		<div classList={{ [theme()]: true, 'text-text': true }}>
+		<div
+			class="text-text min-h-dvh flex flex-col grow"
+			classList={{ [theme()]: true }}
+		>
 			<Router
 				root={(props) => (
 					<TypesafeI18n locale={lang}>
-						<Nav theme={theme} setTheme={setTheme} lang={lang} />
+						<Nav theme={theme} setTheme={setTheme} />
 						<Suspense>{props.children}</Suspense>
 						<Footer />
 					</TypesafeI18n>

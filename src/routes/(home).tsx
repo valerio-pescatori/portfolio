@@ -1,27 +1,30 @@
+import { Show, createEffect, createSignal } from 'solid-js';
+import Typewriter from '~/components/Typewriter/Typewriter';
 import { useI18nContext } from '~/i18n/i18n-solid';
-import { loadLocaleAsync } from '~/i18n/i18n-util.async';
+import type { Locales } from '~/i18n/i18n-types';
 
 export default function Home() {
-	const { LL, locale, setLocale } = useI18nContext();
+	const { LL, locale } = useI18nContext();
+	const [renderSub, setRenderSub] = createSignal(false);
 
-	const updateCookie = async () => {
-		const newLocale = locale() === 'en' ? 'it' : 'en';
-		document.cookie = `lang=${newLocale}; Max-Age=${
-			1000 * 60 * 60 * 24 * 30 * 12
-		}`;
-		await loadLocaleAsync(newLocale);
-		setLocale(newLocale);
-	};
+	createEffect<Locales>((prevLocale) => {
+		if (prevLocale !== locale()) setRenderSub(false);
+		return locale();
+	});
 
 	return (
-		<main class="text-center mx-auto p-4 bg-base">
-			<button type="button" onClick={updateCookie}>
-				{locale()}
-			</button>
-			<h1 class="max-6-xs text-6xl font-thin uppercase my-16">
-				{LL().hi({ name: 'Valerio' })}
+		<main class="text-center p-4 bg-base grow">
+			<h1 class="max-6-xs text-6xl font-thin my-16">
+				<Typewriter
+					text={LL().hi({ name: 'Valerio' })}
+					onAnimationEnd={() => setRenderSub(true)}
+				/>
 			</h1>
-			<h2 class="text-subtext1">{LL().about()}</h2>
+			<Show when={renderSub()}>
+				<h2 class="text-subtext1">
+					<Typewriter text={LL().about()} />
+				</h2>
+			</Show>
 		</main>
 	);
 }
