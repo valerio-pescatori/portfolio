@@ -1,23 +1,43 @@
-import { Router, cache } from '@solidjs/router';
+import type { FlavorName } from '@catppuccin/palette';
+import { Router } from '@solidjs/router';
 import { FileRoutes } from '@solidjs/start/router';
-import { Suspense } from 'solid-js';
+import { Suspense, createSignal } from 'solid-js';
+import { getRequestEvent } from 'solid-js/web';
 import './app.css';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
 import TypesafeI18n from './i18n/i18n-solid';
+import type { Locales } from './i18n/i18n-types';
 import { loadLocale } from './i18n/i18n-util.sync';
-import { getUserLanguage } from './utils/getUserLanguage';
+import { getClientCookie } from './utils/getClientCookie';
 
 export default function App() {
-	const lang = getUserLanguage();
+	const req = getRequestEvent();
+	const [theme, setTheme] = createSignal<FlavorName>('mocha');
+
+	let lang: Locales;
+	if (req) {
+		lang = req.locals.lang;
+		setTheme(req.locals.theme);
+	} else {
+		lang = getClientCookie<Locales>('lang') as Locales;
+		setTheme(getClientCookie<FlavorName>('theme') as FlavorName);
+	}
 	loadLocale(lang);
+
 	return (
-		<Router
-			root={(props) => (
-				<TypesafeI18n locale={lang}>
-					<Suspense>{props.children}</Suspense>
-				</TypesafeI18n>
-			)}
-		>
-			<FileRoutes />
-		</Router>
+		<div classList={{ [theme()]: true, 'text-text': true }}>
+			<Router
+				root={(props) => (
+					<TypesafeI18n locale={lang}>
+						<Nav theme={theme} setTheme={setTheme} lang={lang} />
+						<Suspense>{props.children}</Suspense>
+						<Footer />
+					</TypesafeI18n>
+				)}
+			>
+				<FileRoutes />
+			</Router>
+		</div>
 	);
 }

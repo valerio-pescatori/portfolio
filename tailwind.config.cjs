@@ -1,8 +1,10 @@
+import { flavors } from "@catppuccin/palette";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [require("@catppuccin/tailwindcss")({ defaultFlavor: "mocha" })],
+	content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+	theme: {
+		extend: {},
+	},
+	plugins: [require("@catppuccin/tailwindcss")],
+	safelist: [...Object.keys(flavors)],
 };

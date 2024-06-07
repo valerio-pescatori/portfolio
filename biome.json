@@ -9,6 +9,9 @@
 		"lineWidth": 80,
 		"attributePosition": "auto"
 	},
+	"files": {
+		"ignore": ["src/i18n/*"]
+	},
 	"organizeImports": { "enabled": true },
 	"linter": { "enabled": true, "rules": { "recommended": true } },
 	"javascript": {

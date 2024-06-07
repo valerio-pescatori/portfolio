@@ -1,24 +1,15 @@
 // @refresh reload
+import type { FlavorName } from '@catppuccin/palette';
 import { StartServer, createHandler } from '@solidjs/start/server';
-import { parse } from 'accept-language-parser';
-import type { Locales } from './i18n/i18n-types';
+import { detectLocale } from 'typesafe-i18n/detectors';
 import { locales } from './i18n/i18n-util';
-import { getCookie } from './utils/getCookie';
+import { handleDefaultCookie } from './utils/handleDefaultCookie';
 
-export default createHandler((context) => {
-	let lang: string;
-	const cookie = getCookie('lang');
-	if (cookie) {
-		lang = cookie;
-	} else {
-		const languanges = context.request.headers.get('accept-language');
-		const locale = ((languanges && parse(languanges)[0]?.code) ||
-			'en') as Locales;
-		lang = locales.includes(locale) ? locale : 'en';
-		context.locals = {
-			lang,
-		};
-	}
+const DEFAULT_THEME: FlavorName = 'mocha';
+
+export default createHandler((event) => {
+	const lang = handleDefaultCookie('lang', detectLocale('en', locales), event);
+	handleDefaultCookie('theme', DEFAULT_THEME, event);
 
 	return (
 		<StartServer

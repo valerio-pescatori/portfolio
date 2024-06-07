@@ -15,7 +15,7 @@ export type Translations = RootTranslation
 
 type RootTranslation = {
 	/**
-	 * H​i​ ​I​'​m​ ​{​n​a​m​e​}​ ​:​)
+	 * H​i​,​ ​I​'​m​ ​{​n​a​m​e​}​ ​:​)
 	 * @param {string} name
 	 */
 	hi: RequiredParams<'name'>
@@ -23,17 +23,25 @@ type RootTranslation = {
 	 * W​h​a​t​ ​d​o​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​k​n​o​w​ ​a​b​o​u​t​ ​m​e​?
 	 */
 	about: string
+	/**
+	 * I​'​m​ ​a​ ​f​r​o​n​t​e​n​d​ ​e​n​g​i​n​e​e​r​ ​w​i​t​h​ ​2​ ​y​e​a​r​s​ ​o​f​ ​e​x​p​e​r​i​e​n​c​e​ ​w​i​t​h​ ​a​ ​p​a​s​s​i​o​n​ ​f​o​r​ ​c​o​d​e​ ​q​u​a​l​i​t​y​.​ ​B​.​S​c​.​ ​i​n​ ​C​o​m​p​u​t​e​r​ ​S​c​i​e​n​c​e​,​ ​a​l​w​a​y​s​ ​t​r​y​i​n​g​ ​t​o​ ​l​e​a​r​n​ ​n​e​w​ ​t​h​i​n​g​s​.
+	 */
+	c: string
 }
 
 export type TranslationFunctions = {
 	/**
-	 * Hi I'm {name} :)
+	 * Hi, I'm {name} :)
 	 */
 	hi: (arg: { name: string }) => LocalizedString
 	/**
 	 * What do you want to know about me?
 	 */
 	about: () => LocalizedString
+	/**
+	 * I'm a frontend engineer with 2 years of experience with a passion for code quality. B.Sc. in Computer Science, always trying to learn new things.
+	 */
+	c: () => LocalizedString
 }
 
 export type Formatters = {}
