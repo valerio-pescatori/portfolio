@@ -3,6 +3,8 @@
 		"source.fixAll": "always",
 		"source.organizeImports": "always"
 	},
+	"prettier.enable": false,
+	"editor.defaultFormatter": "biomejs.biome",
 	"codeium.enableConfig": {
 		"*": false
 	}
