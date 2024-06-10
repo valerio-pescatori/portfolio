@@ -3,8 +3,13 @@
 		"source.fixAll": "always",
 		"source.organizeImports": "always"
 	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
 	"prettier.enable": false,
-	"editor.defaultFormatter": "biomejs.biome",
 	"codeium.enableConfig": {
 		"*": false
 	}
