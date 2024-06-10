@@ -5,7 +5,7 @@ import { Suspense, createSignal } from 'solid-js';
 import { getRequestEvent } from 'solid-js/web';
 import './app.css';
 import Footer from './components/Footer';
-import Nav from './components/Nav';
+import Header from './components/Header';
 import TypesafeI18n from './i18n/i18n-solid';
 import type { Locales } from './i18n/i18n-types';
 import { loadLocale } from './i18n/i18n-util.sync';
@@ -27,14 +27,18 @@ export default function App() {
 
 	return (
 		<div
-			class="text-text min-h-dvh flex flex-col grow"
+			class="text-text min-h-dvh flex flex-col bg-base"
 			classList={{ [theme()]: true }}
 		>
 			<Router
 				root={(props) => (
 					<TypesafeI18n locale={lang}>
-						<Nav theme={theme} setTheme={setTheme} />
-						<Suspense>{props.children}</Suspense>
+						<Header theme={theme} setTheme={setTheme} />
+						<Suspense>
+							<main class="grow w-10/12 md:w-8/12 lg:w-7/6 xl:w-6/12 mx-auto">
+								{props.children}
+							</main>
+						</Suspense>
 						<Footer />
 					</TypesafeI18n>
 				)}

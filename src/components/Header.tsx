@@ -6,12 +6,12 @@ import { locales } from '~/i18n/i18n-util';
 import { loadLocaleAsync } from '~/i18n/i18n-util.async';
 import Dropdown from './Dropdown';
 
-type NavProps = {
+type HeaderProps = {
 	theme: Accessor<FlavorName>;
 	setTheme: Setter<FlavorName>;
 };
 
-export default function Nav(props: NavProps) {
+export default function Header(props: HeaderProps) {
 	const { locale, setLocale } = useI18nContext();
 
 	const switchLocale = async (newLocale: Locales) => {
@@ -30,7 +30,7 @@ export default function Nav(props: NavProps) {
 	};
 
 	return (
-		<nav class="bg-mantle flex justify-end px-4 py-2">
+		<header class="bg-mantle flex justify-end px-4 py-2">
 			<Dropdown<FlavorName>
 				items={Object.keys(flavors).map((f) => ({
 					value: f as FlavorName,
@@ -45,6 +45,6 @@ export default function Nav(props: NavProps) {
 				items={locales.map((v) => ({ label: v, value: v }))}
 				onSelectItem={switchLocale}
 			/>
-		</nav>
+		</header>
 	);
 }
