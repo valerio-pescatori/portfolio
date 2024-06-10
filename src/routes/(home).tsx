@@ -13,7 +13,7 @@ export default function Home() {
 	});
 
 	return (
-		<main class="text-center p-4 bg-base grow">
+		<main class="p-4 bg-base grow w-3/4 text-left mx-auto">
 			<h1 class="max-6-xs text-6xl font-thin my-16">
 				<Typewriter
 					text={LL().hi({ name: 'Valerio' })}
@@ -22,7 +22,7 @@ export default function Home() {
 			</h1>
 			<Show when={renderSub()}>
 				<h2 class="text-subtext1">
-					<Typewriter text={LL().about()} maxTimeout={100} />
+					<Typewriter text={LL().about()} maxTimeout={25} />
 				</h2>
 			</Show>
 		</main>
