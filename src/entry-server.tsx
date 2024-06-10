@@ -25,6 +25,11 @@ export default createHandler((event) => {
 			document={({ assets, children, scripts }) => (
 				<html lang={lang}>
 					<head>
+						<title>Valerio Pescatori - Frontend Engineer</title>
+						<meta
+							name="description"
+							content="Valerio Pescatori, Frontend Engineer"
+						/>
 						<meta charset="utf-8" />
 						<meta
 							name="viewport"
