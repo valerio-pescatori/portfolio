@@ -1,4 +1,4 @@
-export type Alphabet =
+export type MistypableCharacters =
 	| 'a'
 	| 'b'
 	| 'c'
@@ -26,7 +26,8 @@ export type Alphabet =
 	| 'y'
 	| 'z'
 	| ','
-	| '.'
-	| ';'
-	| ' '
-	| '[';
+	| '.';
+
+export type NonMistypableCharacters = ';' | ' ' | '[';
+
+export type Alphabet = NonMistypableCharacters | MistypableCharacters;

@@ -1,6 +1,6 @@
-import type { Alphabet } from '../types/alphabet';
+import type { TypoMap } from '../types/TypoMap';
 
-export const typoMap: Partial<Record<Alphabet, Alphabet[]>> = {
+export const typoMap: TypoMap = {
 	'.': [',', 'l', ';'],
 	',': ['.', 'l'],
 	a: ['q', 's', 'z'],

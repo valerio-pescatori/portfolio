@@ -22,7 +22,7 @@ export default function Home() {
 			</h1>
 			<Show when={renderSub()}>
 				<h2 class="text-subtext1">
-					<Typewriter text={LL().about()} />
+					<Typewriter text={LL().about()} maxTimeout={100} />
 				</h2>
 			</Show>
 		</main>
