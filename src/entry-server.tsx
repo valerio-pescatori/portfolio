@@ -11,6 +11,15 @@ export default createHandler((event) => {
 	const lang = handleDefaultCookie('lang', detectLocale('en', locales), event);
 	handleDefaultCookie('theme', DEFAULT_THEME, event);
 
+	// default theme preference, reduced motion
+	// const evt = getRequestEvent();
+
+	// evt?.response.headers.set(
+	// 	"Accept-CH",
+	// 	"Sec-CH-Prefers-Color-Scheme, Sec-CH-Prefers-Reduced-Motion",
+	// );
+	// console.log(evt?.request.headers);
+
 	return (
 		<StartServer
 			document={({ assets, children, scripts }) => (
