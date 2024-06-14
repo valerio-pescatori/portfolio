@@ -55,10 +55,20 @@ type RootTranslation = {
 		 */
 		thingsIveDone: string
 	}
-	/**
-	 * I​'​m​ ​a​ ​f​r​o​n​t​e​n​d​ ​e​n​g​i​n​e​e​r​ ​w​i​t​h​ ​2​ ​y​e​a​r​s​ ​o​f​ ​e​x​p​e​r​i​e​n​c​e​ ​w​i​t​h​ ​a​ ​p​a​s​s​i​o​n​ ​f​o​r​ ​c​o​d​e​ ​q​u​a​l​i​t​y​.​ ​B​.​S​c​.​ ​i​n​ ​C​o​m​p​u​t​e​r​ ​S​c​i​e​n​c​e​,​ ​a​l​w​a​y​s​ ​t​r​y​i​n​g​ ​t​o​ ​l​e​a​r​n​ ​n​e​w​ ​t​h​i​n​g​s​.
-	 */
-	c: string
+	whoami: {
+		/**
+		 * I​'​m​ ​V​a​l​e​r​i​o​ ​P​e​s​c​a​t​o​r​i​ ​a​n​d​ ​I​ ​w​o​r​k​ ​a​s​ ​a​ ​F​r​o​n​t​e​n​d​ ​E​n​g​i​n​e​e​r
+		 */
+		title: string
+		/**
+		 * C​h​i​l​d​ ​o​f​ ​t​h​e​ ​w​e​b​,​ ​_​a​l​w​a​y​s​_​ ​b​e​e​n​ ​p​a​s​s​i​o​n​a​t​e​ ​a​b​o​u​t​ ​C​o​m​p​u​t​e​r​ ​S​c​i​e​n​c​e​ ​a​n​d​ ​p​r​o​g​r​a​m​m​i​n​g​.​ ​E​a​r​n​e​d​ ​m​y​ ​B​a​c​h​e​l​o​r​'​s​ ​D​e​g​r​e​e​ ​i​n​ ​C​o​m​p​u​t​e​r​ ​S​c​i​e​n​c​e​ ​f​r​o​m​ ​_​S​a​p​i​e​n​z​a​ ​U​n​i​v​e​r​s​i​t​y​ ​o​f​ ​R​o​m​e​_​.
+		 */
+		par1: string
+		/**
+		 * I​'​v​e​ ​b​e​e​n​ ​w​o​r​k​i​n​g​ ​f​o​r​ ​A​c​c​e​n​t​u​r​e​ ​f​o​r​ ​t​h​e​ ​p​a​s​t​ ​2​ ​y​e​a​r​s​:​ ​I​ ​w​o​r​k​e​d​ ​o​n​ ​v​a​r​i​o​u​s​ ​l​a​r​g​e​-​s​c​a​l​e​ ​p​r​o​j​e​c​t​s​ ​b​y​ ​t​a​k​i​n​g​ ​t​e​c​h​n​i​c​a​l​ ​d​e​c​i​s​i​o​n​s​ ​a​n​d​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​n​e​w​ ​f​e​a​t​u​r​e​s​.​ ​A​m​o​n​g​ ​t​h​e​ ​t​o​o​l​ ​I​'​v​e​ ​u​s​e​d​ ​t​h​e​ ​m​o​s​t​ ​i​m​p​o​r​t​a​n​t​ ​a​r​e​:
+		 */
+		par2: string
+	}
 }
 
 export type TranslationFunctions = {
@@ -102,10 +112,20 @@ export type TranslationFunctions = {
 		 */
 		thingsIveDone: () => LocalizedString
 	}
-	/**
-	 * I'm a frontend engineer with 2 years of experience with a passion for code quality. B.Sc. in Computer Science, always trying to learn new things.
-	 */
-	c: () => LocalizedString
+	whoami: {
+		/**
+		 * I'm Valerio Pescatori and I work as a Frontend Engineer
+		 */
+		title: () => LocalizedString
+		/**
+		 * Child of the web, _always_ been passionate about Computer Science and programming. Earned my Bachelor's Degree in Computer Science from _Sapienza University of Rome_.
+		 */
+		par1: () => LocalizedString
+		/**
+		 * I've been working for Accenture for the past 2 years: I worked on various large-scale projects by taking technical decisions and implementing new features. Among the tool I've used the most important are:
+		 */
+		par2: () => LocalizedString
+	}
 }
 
 export type Formatters = {}
