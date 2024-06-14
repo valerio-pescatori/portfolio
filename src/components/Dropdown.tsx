@@ -21,7 +21,7 @@ export default function Dropdown<T>(props: DropdownProps<T>) {
 	return (
 		<div class={`relative ${props.class}`} ref={setRef}>
 			<button
-				class="px-4 rounded-xl border transition-colors hover:border-mauve"
+				class="px-4 rounded-xl border transition-colors hover:border-mauve focus:border-mauve"
 				classList={{
 					'border-mauve': isOpen(),
 					'border-transparent': !isOpen(),
@@ -37,7 +37,7 @@ export default function Dropdown<T>(props: DropdownProps<T>) {
 						{(item) => (
 							<li>
 								<button
-									class="w-full text-left"
+									class="w-full text-left transition-colors hover:text-mauve focus:text-mauve"
 									type="button"
 									onClick={() => {
 										props.onSelectItem(item.value);

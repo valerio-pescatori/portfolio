@@ -1,16 +1,16 @@
 import { createEffect, createSignal, untrack } from 'solid-js';
 import { typoMap } from './constants/typoMap';
+import type { DrawCharRandomness } from './types/DrawCharRandomness';
 import { drawChar } from './utils/drawChar';
 
 type TypewriterProps = {
 	text: string;
-	typoRate?: number;
-	maxTimeout?: number;
 	onAnimationEnd?: () => void;
+	drawCharRandomness?: DrawCharRandomness;
 };
 
 export default function Typewriter(props: TypewriterProps) {
-	const { typoRate = 0.8, maxTimeout = 250 } = props;
+	const { drawCharRandomness } = props;
 	const [content, setContent] = createSignal(props.text[0]);
 
 	createEffect((prevText) => {
@@ -21,14 +21,13 @@ export default function Typewriter(props: TypewriterProps) {
 		}
 		untrack(async () => {
 			while (content() !== props.text) {
-				const t = await drawChar(
-					props.text[content().length],
-					content,
-					setContent,
+				const t = await drawChar({
+					char: props.text[content().length],
+					str: content,
+					setStr: setContent,
 					typoMap,
-					typoRate,
-					maxTimeout,
-				);
+					...drawCharRandomness,
+				});
 				timeouts = timeouts.concat(t);
 			}
 			props.onAnimationEnd?.();

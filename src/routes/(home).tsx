@@ -14,26 +14,32 @@ export default function Home() {
 	});
 
 	return (
-		<div class="text-left mx-auto">
+		<div class="text-left mx-auto grid grid-rows-home-grid mt-16">
 			{/* Presentation */}
-			<h1 class="text-6xl font-thin my-16">
+			<h1 class="text-4xl md:text-5xl font-thin">
 				<Typewriter
 					text={LL().hi({ name: 'Valerio' })}
 					onAnimationEnd={() => setRenderSub(true)}
 				/>
 			</h1>
-			<Show when={renderSub()}>
+			<Show when={renderSub()} fallback={<span aria-busy />}>
 				<h2 class="text-subtext1">
 					<Typewriter
 						text={LL().about()}
-						maxTimeout={25}
 						onAnimationEnd={() => setRenderList(true)}
+						drawCharRandomness={{
+							maxTimeout: 25,
+							typoRate: 0,
+						}}
 					/>
 				</h2>
 			</Show>
 			{/* Nav Section */}
-			<nav>
-				<ul class="mt-8 list-decimal list-inside">
+			<nav
+				class="transition-all duration-300 delay-500 mt-4 sm:mt-0"
+				classList={{ 'opacity-0': !renderList() }}
+			>
+				<ul class="mt-768 list-decimal list-inside">
 					<li>
 						<a href="/whoami">{LL().list.whoAmI()}</a>
 					</li>

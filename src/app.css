@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+	* {
+	outline: none;
+	}
+
 	@font-face {
 		font-family: "SourceCodePro";
 		src: local("SourceCodePro"), url("/SourceCodePro.ttf");
 	}
 
 	a {
-		@apply hover:underline;
+		@apply focus:underline focus:text-mauve hover:underline hover:text-mauve transition-colors duration-150;
 	}
 }

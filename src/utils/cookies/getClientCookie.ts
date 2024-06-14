@@ -1,7 +1,9 @@
+import { isServer } from 'solid-js/web';
+
 export const getClientCookie = <T extends string>(
 	key: string,
 ): T | undefined => {
-	if (typeof document === 'undefined') return;
+	if (isServer) return;
 	const cookie = document.cookie;
 	if (!cookie) return;
 	const cookies = cookie.split('; ');

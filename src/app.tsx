@@ -9,7 +9,7 @@ import Header from './components/Header';
 import TypesafeI18n from './i18n/i18n-solid';
 import type { Locales } from './i18n/i18n-types';
 import { loadLocale } from './i18n/i18n-util.sync';
-import { getClientCookie } from './utils/getClientCookie';
+import { getClientCookie } from './utils/cookies/getClientCookie';
 
 export default function App() {
 	const req = getRequestEvent();
@@ -27,7 +27,7 @@ export default function App() {
 
 	return (
 		<div
-			class="text-text min-h-dvh flex flex-col bg-base"
+			class="text-text h-dvh flex flex-col bg-base"
 			classList={{ [theme()]: true }}
 		>
 			<Router
@@ -35,7 +35,7 @@ export default function App() {
 					<TypesafeI18n locale={lang}>
 						<Header theme={theme} setTheme={setTheme} />
 						<Suspense>
-							<main class="grow w-10/12 md:w-8/12 lg:w-7/6 xl:w-6/12 mx-auto">
+							<main class="grow w-10/12 lg:w-7/6 xl:w-6/12 mx-auto">
 								{props.children}
 							</main>
 						</Suspense>

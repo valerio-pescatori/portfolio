@@ -3,17 +3,7 @@
 		"source.fixAll": "always",
 		"source.organizeImports": "always"
 	},
-	"[javascript]": {
+	"[css][typescript][javascript][typescriptreact][json]": {
 		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"prettier.enable": false,
-	"codeium.enableConfig": {
-		"*": false
 	}
 }

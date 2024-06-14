@@ -1,6 +1,4 @@
-import type { Accessor, Setter } from 'solid-js';
-
-import type { TypoMap } from '../types/TypoMap';
+import type { DrawCharConfig } from '../types/DrawCharConfig';
 import type { MistypableCharacters } from '../types/alphabet';
 import { sleep } from './sleep';
 
@@ -8,19 +6,22 @@ import { sleep } from './sleep';
  * By default the `maxTimeout` is `250`ms
  * @returns The randomly generate timeout in ms
  */
-export const drawChar = async (
-	char: string,
-	str: Accessor<string>,
-	setStr: Setter<string>,
-	typoMap: TypoMap,
-	typoRate = 0.75,
+export const drawChar = async ({
+	char,
+	str,
+	setStr,
+	typoMap,
+	typoRate = 0.2,
 	maxTimeout = 250,
-) => {
+	deleteTimeoutMultiplier = 1.2,
+}: DrawCharConfig) => {
 	const timeouts: NodeJS.Timeout[] = [];
 	const randomTime = Math.random() * maxTimeout;
-	const addTypo = Math.random() > typoRate;
-	const deleteTypoTime = Number(addTypo && Math.random() * maxTimeout);
-	const correctTypoTime = Number(addTypo && Math.random() * maxTimeout);
+	const addTypo = Math.random() < typoRate;
+	const deleteTypoTime =
+		Number(addTypo && Math.random() * maxTimeout) * deleteTimeoutMultiplier;
+	const correctTypoTime =
+		Number(addTypo && Math.random() * maxTimeout) * deleteTimeoutMultiplier;
 	timeouts.push(await sleep(randomTime));
 	if (addTypo && char in typoMap) {
 		const typoArr = typoMap[char as MistypableCharacters];
