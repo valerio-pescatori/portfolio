@@ -14,6 +14,24 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
+	'404': {
+		/**
+		 * 4​0​4​ ​-​ ​N​o​t​ ​F​o​u​n​d
+		 */
+		error: string
+		/**
+		 * G​o​ ​b​a​c​k​ 
+		 */
+		textPrefix: string
+		/**
+		 * h​o​m​e
+		 */
+		textInfix: string
+		/**
+		 *  ​:​)
+		 */
+		testPostfix: string
+	}
 	/**
 	 * H​i​,​ ​I​'​m​ ​{​n​a​m​e​}​ ​:​)
 	 * @param {string} name
@@ -44,6 +62,24 @@ type RootTranslation = {
 }
 
 export type TranslationFunctions = {
+	'404': {
+		/**
+		 * 404 - Not Found
+		 */
+		error: () => LocalizedString
+		/**
+		 * Go back 
+		 */
+		textPrefix: () => LocalizedString
+		/**
+		 * home
+		 */
+		textInfix: () => LocalizedString
+		/**
+		 *  :)
+		 */
+		testPostfix: () => LocalizedString
+	}
 	/**
 	 * Hi, I'm {name} :)
 	 */

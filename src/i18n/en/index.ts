@@ -8,6 +8,12 @@ const en = {
 		contacts: 'Where can I contact you?',
     thingsIveDone: "Show me something you've done"  
 	},
+	404: {
+		error: '404 - Not Found',
+		textPrefix: 'Go back ',
+		textInfix: 'home',
+		testPostfix: ' :)' 
+	},
 	c: "I'm a frontend engineer with 2 years of experience with a passion for code quality. B.Sc. in Computer Science, always trying to learn new things.",
 } satisfies BaseTranslation;
 

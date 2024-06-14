@@ -8,6 +8,12 @@ const it = {
 		contacts: 'Dove posso contattarti?',
 		thingsIveDone: 'Mostrami qualcosa che hai fatto'
 	},
+	404: {
+		error: '404 - Not Found',
+		textPrefix: 'Torna a ',
+		textInfix: 'casa',
+		testPostfix: ' :)'
+	},
 	c: 'Sono un Frontend Engineer con 2 anni di esperienza e una passione smisurata per la qualità del codice. B. Sc. in Informatica, impegnato ogni giorno nell\'imparare cose nuove',
 
 
