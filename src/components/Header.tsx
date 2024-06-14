@@ -1,5 +1,6 @@
 import { type FlavorName, flavors } from '@catppuccin/palette';
-import type { Accessor, Setter } from 'solid-js';
+import { useLocation } from '@solidjs/router';
+import { type Accessor, type Setter, Show } from 'solid-js';
 import { useI18nContext } from '~/i18n/i18n-solid';
 import type { Locales } from '~/i18n/i18n-types';
 import { locales } from '~/i18n/i18n-util';
@@ -13,6 +14,7 @@ type HeaderProps = {
 
 export default function Header(props: HeaderProps) {
 	const { locale, setLocale } = useI18nContext();
+	const location = useLocation();
 
 	const switchLocale = async (newLocale: Locales) => {
 		document.cookie = `lang=${newLocale}; Max-Age=${
@@ -31,6 +33,11 @@ export default function Header(props: HeaderProps) {
 
 	return (
 		<header class="bg-mantle flex justify-end px-4 py-2">
+			<Show when={location.pathname !== '/'}>
+				<a class="mr-auto" href="/">
+					home
+				</a>
+			</Show>
 			<Dropdown<FlavorName>
 				items={Object.keys(flavors).map((f) => ({
 					value: f as FlavorName,

@@ -3,7 +3,19 @@
 		"source.fixAll": "always",
 		"source.organizeImports": "always"
 	},
-	"[css][typescript][javascript][typescriptreact][json]": {
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	}
 }
