@@ -35,7 +35,7 @@ export default function App() {
 					<TypesafeI18n locale={lang}>
 						<Header theme={theme} setTheme={setTheme} />
 						<Suspense>
-							<main class="grow w-10/12 lg:w-7/6 xl:w-6/12 mx-auto">
+							<main class="grow w-10/12 lg:w-7/6 xl:w-6/12 mx-auto pt-16">
 								{props.children}
 							</main>
 						</Suspense>

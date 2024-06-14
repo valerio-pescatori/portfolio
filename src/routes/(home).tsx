@@ -14,7 +14,7 @@ export default function Home() {
 	});
 
 	return (
-		<div class="text-left mx-auto grid grid-rows-home-grid mt-16">
+		<div class="text-left mx-auto grid grid-rows-home-grid">
 			{/* Presentation */}
 			<h1 class="text-4xl md:text-5xl font-thin">
 				<Typewriter
@@ -36,6 +36,7 @@ export default function Home() {
 			</Show>
 			{/* Nav Section */}
 			<nav
+				aria-busy={!renderList()}
 				class="transition-all duration-300 delay-500 mt-4 sm:mt-0"
 				classList={{ 'opacity-0': !renderList() }}
 			>
