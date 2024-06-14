@@ -27,5 +27,6 @@
 		"@catppuccin/tailwindcss": "^0.1.6",
 		"concurrently": "^8.2.2",
 		"lefthook": "^1.6.15"
-	}
+	},
+	"version": "1.0.0"
 }
