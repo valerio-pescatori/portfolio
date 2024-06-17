@@ -2,11 +2,13 @@ import { Show, createEffect, createSignal } from 'solid-js';
 import Typewriter from '~/components/Typewriter/Typewriter';
 import { useI18nContext } from '~/i18n/i18n-solid';
 import type { Locales } from '~/i18n/i18n-types';
+import { useIsVisited } from '~/utils/useIsVisited';
 
 export default function Home() {
 	const { LL, locale } = useI18nContext();
 	const [renderSub, setRenderSub] = createSignal(false);
 	const [renderList, setRenderList] = createSignal(false);
+	const isVisited = useIsVisited();
 
 	createEffect<Locales>((prevLocale) => {
 		if (prevLocale !== locale()) setRenderSub(false);
@@ -18,6 +20,7 @@ export default function Home() {
 			{/* Presentation */}
 			<h1 class="text-4xl md:text-5xl font-thin">
 				<Typewriter
+					disableAnimation={isVisited}
 					text={LL().hi({ name: 'Valerio' })}
 					onAnimationEnd={() => setRenderSub(true)}
 				/>
@@ -25,8 +28,11 @@ export default function Home() {
 			<Show when={renderSub()} fallback={<span aria-busy />}>
 				<h2 class="text-subtext1">
 					<Typewriter
+						disableAnimation={isVisited}
 						text={LL().about()}
-						onAnimationEnd={() => setRenderList(true)}
+						onAnimationEnd={() => {
+							setRenderList(true);
+						}}
 						drawCharRandomness={{
 							maxTimeout: 25,
 							typoRate: 0,
@@ -38,7 +44,9 @@ export default function Home() {
 			<nav
 				aria-busy={!renderList()}
 				class="transition-all duration-300 delay-500 mt-4 sm:mt-0"
-				classList={{ 'opacity-0': !renderList() }}
+				classList={{
+					'opacity-0 pointer-events-none': !renderList() && !isVisited,
+				}}
 			>
 				<ul class="mt-768 list-decimal list-inside">
 					<li>

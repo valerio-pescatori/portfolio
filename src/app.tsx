@@ -27,7 +27,7 @@ export default function App() {
 
 	return (
 		<div
-			class="text-text h-dvh flex flex-col bg-base"
+			class="text-text min-h-dvh flex flex-col bg-base"
 			classList={{ [theme()]: true }}
 		>
 			<Router
