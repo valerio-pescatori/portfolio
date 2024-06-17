@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0](https://github.com/valerio-pescatori/portfolio/compare/v1.0.0...v1.1.0) (2024-06-17)
+
+
+### Features
+
+* **Footer:** fixed footer ([b08e17e](https://github.com/valerio-pescatori/portfolio/commit/b08e17e7be5d72b7f6cffa6101e2eb5c6ff43eaf))
+* **Header:** adds home link ([102b2da](https://github.com/valerio-pescatori/portfolio/commit/102b2da014b490ccff947277a0926cf16bc5831e))
+* **TranslateMarkdown:** adds TranslateMarkdown component ([6be8df2](https://github.com/valerio-pescatori/portfolio/commit/6be8df28fd397f65c2fbeded3f4bf569fef34715))
+* **TranslateMarkdown:** makes component Dynamic ([41aa0aa](https://github.com/valerio-pescatori/portfolio/commit/41aa0aab096c34565271d65fc83ce371d33432ad))
+* **Typewriter:** adds `disableAnimation` prop ([c2ad399](https://github.com/valerio-pescatori/portfolio/commit/c2ad399907228d2730b50dcbc58233c9a7515ae5))
+* **Whoami:** implements Whoami page ([534c258](https://github.com/valerio-pescatori/portfolio/commit/534c25839fbae12378acfb2ea4dc0533502e33c2))
+
+
+### Bug Fixes
+
+* **app:** fixes layout ([54bf651](https://github.com/valerio-pescatori/portfolio/commit/54bf6512ae317b6de3680e20adbd5ea27edb835e))
+
 ## 1.0.0 (2024-06-14)
 
 
