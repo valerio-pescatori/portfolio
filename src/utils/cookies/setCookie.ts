@@ -6,5 +6,7 @@ export const setCookie = (key: string, value: string) => {
 		const req = getRequestEvent();
 		if (!req) return;
 		vinxiSetCookie(req.nativeEvent, key, value);
+		return;
 	}
+	document.cookie = `${key}=${value}`;
 };
