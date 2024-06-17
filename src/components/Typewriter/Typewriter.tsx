@@ -5,6 +5,7 @@ import { drawChar } from './utils/drawChar';
 
 type TypewriterProps = {
 	text: string;
+	disableAnimation?: boolean;
 	onAnimationEnd?: () => void;
 	drawCharRandomness?: DrawCharRandomness;
 };
@@ -15,6 +16,7 @@ export default function Typewriter(props: TypewriterProps) {
 
 	createEffect((prevText) => {
 		let timeouts: NodeJS.Timeout[] = [];
+		if (props.disableAnimation) return;
 		if (prevText !== props.text) {
 			setContent('');
 			timeouts.forEach(clearTimeout);
@@ -38,8 +40,11 @@ export default function Typewriter(props: TypewriterProps) {
 	return (
 		<>
 			<span class="sr-only">{props.text}</span>
-			<span aria-busy={content() !== props.text} aria-hidden>
-				{content()}
+			<span
+				aria-busy={!props.disableAnimation && content() !== props.text}
+				aria-hidden
+			>
+				{props.disableAnimation ? props.text : content()}
 			</span>
 		</>
 	);
