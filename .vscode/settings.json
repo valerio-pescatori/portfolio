@@ -3,6 +3,9 @@
 		"source.fixAll": "always",
 		"source.organizeImports": "always"
 	},
+	"codeium.enableConfig": {
+		"*": false
+	},
 	"[css]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
