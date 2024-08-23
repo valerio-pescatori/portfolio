@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/valerio-pescatori/portfolio/compare/v1.1.0...v1.2.0) (2024-08-23)
+
+
+### Features
+
+* **i18n:** adds it translation for the 'whoami' page ([165b13e](https://github.com/valerio-pescatori/portfolio/commit/165b13ed31a3dbd5d819741414e5d8757c605037))
+
 ## [1.1.0](https://github.com/valerio-pescatori/portfolio/compare/v1.0.0...v1.1.0) (2024-06-17)
 
 
