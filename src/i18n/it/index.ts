@@ -14,8 +14,11 @@ const it = {
 		textInfix: 'casa',
 		testPostfix: ' :)'
 	},
-	c: 'Sono un Frontend Engineer con 2 anni di esperienza e una passione smisurata per la qualità del codice. B. Sc. in Informatica, impegnato ogni giorno nell\'imparare cose nuove',
-
+	whoami:  {
+		title: "Mi chiamo Valerio Pescatori e sono un Frontend Engineer",
+		par1: "Figlio del web, sono _sempre_ stato appassionato di informatica e programamzione. Ho conseguito una Laurea Triennale in Informatica presso _Sapienza, Università di Roma_.",
+		par2: "Ho lavorato per Accenture per due anni: ho partecipato a diversi progetti di grandi dimensioni prendendo decisioni tecniche e architetturali, implementando nuove funzionalità. Tra i tool che ho utilizato di più ci sono:",
+	},
 
 } satisfies Translation;
 
