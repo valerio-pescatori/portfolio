@@ -3,6 +3,7 @@ import TranslateMarkdown from '~/components/TranslateMarkdown';
 import Typewriter from '~/components/Typewriter/Typewriter';
 import { useI18nContext } from '~/i18n/i18n-solid';
 import { useIsVisited } from '~/utils/useIsVisited';
+import { typewriterFast } from '../../utils/typewriterConfigs';
 
 export default function Whoami() {
 	const [render, setRender] = createSignal(false);
@@ -20,9 +21,7 @@ export default function Whoami() {
 				<Typewriter
 					disableAnimation={isVisited}
 					text={LL().whoami.title()}
-					drawCharRandomness={{
-						maxTimeout: 100,
-					}}
+					drawCharRandomness={typewriterFast}
 					onAnimationEnd={() => {
 						setRender(true);
 					}}

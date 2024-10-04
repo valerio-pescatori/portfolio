@@ -19,6 +19,9 @@ const en = {
 		par1: "Child of the web, _always_ been passionate about Computer Science and programming. Earned my Bachelor's Degree in Computer Science from _Sapienza University of Rome_.",
 		par2: "I've been working for Accenture for the past 2 years: I worked on various large-scale projects by taking technical decisions and implementing new features. Among the tool I've used the most important are:",
 	},
+	contacts: {
+		title: "You can find me here:"
+	}
 } satisfies BaseTranslation;
 
 export default en;

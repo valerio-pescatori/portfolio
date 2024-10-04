@@ -69,6 +69,12 @@ type RootTranslation = {
 		 */
 		par2: string
 	}
+	contacts: {
+		/**
+		 * Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​m​e​ ​h​e​r​e​:
+		 */
+		title: string
+	}
 }
 
 export type TranslationFunctions = {
@@ -125,6 +131,12 @@ export type TranslationFunctions = {
 		 * I've been working for Accenture for the past 2 years: I worked on various large-scale projects by taking technical decisions and implementing new features. Among the tool I've used the most important are:
 		 */
 		par2: () => LocalizedString
+	}
+	contacts: {
+		/**
+		 * You can find me here:
+		 */
+		title: () => LocalizedString
 	}
 }
 
