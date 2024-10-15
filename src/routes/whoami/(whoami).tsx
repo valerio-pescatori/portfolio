@@ -34,13 +34,19 @@ export default function Whoami() {
 				{...classes('delay-100')}
 			/>
 
-			<p {...classes('delay-500')}>{LL().whoami.par2()}</p>
+			<TranslateMarkdown
+				as="p"
+				message={LL().whoami.par2()}
+				{...classes('delay-100')}
+			/>
+
+			<p {...classes('delay-500')}>{LL().whoami.par3()}</p>
 
 			<ul {...classes('list-inside list-disc transition-opacity delay-1000')}>
 				<li>Typescript</li>
 				<li>React 18</li>
 				<li>Vite</li>
-				<li>Angular 13+</li>
+				<li>Angular 15+</li>
 				<li>Tailwind</li>
 				<li>Linting + Git hooks</li>
 			</ul>

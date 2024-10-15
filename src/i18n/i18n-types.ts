@@ -65,9 +65,13 @@ type RootTranslation = {
 		 */
 		par1: string
 		/**
-		 * I​'​v​e​ ​b​e​e​n​ ​w​o​r​k​i​n​g​ ​f​o​r​ ​A​c​c​e​n​t​u​r​e​ ​f​o​r​ ​t​h​e​ ​p​a​s​t​ ​2​ ​y​e​a​r​s​:​ ​I​ ​w​o​r​k​e​d​ ​o​n​ ​v​a​r​i​o​u​s​ ​l​a​r​g​e​-​s​c​a​l​e​ ​p​r​o​j​e​c​t​s​ ​b​y​ ​t​a​k​i​n​g​ ​t​e​c​h​n​i​c​a​l​ ​d​e​c​i​s​i​o​n​s​ ​a​n​d​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​n​e​w​ ​f​e​a​t​u​r​e​s​.​ ​A​m​o​n​g​ ​t​h​e​ ​t​o​o​l​ ​I​'​v​e​ ​u​s​e​d​ ​t​h​e​ ​m​o​s​t​ ​i​m​p​o​r​t​a​n​t​ ​a​r​e​:
+		 * D​u​r​i​n​g​ ​m​y​ ​s​t​u​d​i​e​s​ ​I​ ​h​a​d​ ​t​h​e​ ​c​h​a​n​c​e​ ​t​o​ ​l​e​a​r​n​ ​a​ ​l​o​t​ ​a​n​d​ ​t​o​ ​d​e​v​e​l​o​p​ ​a​ ​_​"​s​c​i​e​n​t​i​f​i​c​"​_​ ​a​p​p​r​o​a​c​h​ ​t​h​a​t​ ​I​ ​u​s​e​ ​o​n​ ​a​ ​d​a​i​l​y​ ​b​a​s​i​s​ ​t​o​ ​s​o​l​v​e​ ​t​e​c​h​i​n​c​a​l​ ​p​r​o​b​l​e​m​s​,​ ​t​o​ ​b​u​i​l​d​ ​_​_​s​c​a​l​a​b​l​e​_​_​,​ ​_​_​u​s​e​r​-​f​r​i​e​n​d​l​y​_​_​ ​a​n​d​ ​_​_​e​f​f​i​c​i​e​n​t​_​_​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​.
 		 */
 		par2: string
+		/**
+		 * I​'​v​e​ ​b​e​e​n​ ​w​o​r​k​i​n​g​ ​f​o​r​ ​A​c​c​e​n​t​u​r​e​ ​f​o​r​ ​t​h​e​ ​p​a​s​t​ ​2​ ​y​e​a​r​s​:​ ​I​ ​w​o​r​k​e​d​ ​o​n​ ​v​a​r​i​o​u​s​ ​l​a​r​g​e​-​s​c​a​l​e​ ​p​r​o​j​e​c​t​s​ ​t​a​k​i​n​g​ ​t​e​c​h​n​i​c​a​l​ ​d​e​c​i​s​i​o​n​s​ ​a​n​d​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​n​e​w​ ​f​e​a​t​u​r​e​s​.​ ​A​m​o​n​g​ ​t​h​e​ ​t​o​o​l​ ​I​'​v​e​ ​u​s​e​d​ ​t​h​e​ ​m​o​s​t​ ​i​m​p​o​r​t​a​n​t​ ​a​r​e​:
+		 */
+		par3: string
 	}
 	contacts: {
 		/**
@@ -128,9 +132,13 @@ export type TranslationFunctions = {
 		 */
 		par1: () => LocalizedString
 		/**
-		 * I've been working for Accenture for the past 2 years: I worked on various large-scale projects by taking technical decisions and implementing new features. Among the tool I've used the most important are:
+		 * During my studies I had the chance to learn a lot and to develop a _"scientific"_ approach that I use on a daily basis to solve techincal problems, to build __scalable__, __user-friendly__ and __efficient__ architectures.
 		 */
 		par2: () => LocalizedString
+		/**
+		 * I've been working for Accenture for the past 2 years: I worked on various large-scale projects taking technical decisions and implementing new features. Among the tool I've used the most important are:
+		 */
+		par3: () => LocalizedString
 	}
 	contacts: {
 		/**
