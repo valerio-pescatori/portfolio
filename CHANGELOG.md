@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.0](https://github.com/valerio-pescatori/portfolio/compare/v1.1.0...v1.2.0) (2024-10-16)
+
+
+### Features
+
+* **contacts:** impements contacts page ([a1eee60](https://github.com/valerio-pescatori/portfolio/commit/a1eee60124ae9b6738d5b7fa001eef75831101d0))
+* **header:** adds chevron left icon ([08751ad](https://github.com/valerio-pescatori/portfolio/commit/08751ad0fe648df863f5b2c3a455957a3f7ca446))
+* **i18n:** adds it translation for the 'whoami' page ([165b13e](https://github.com/valerio-pescatori/portfolio/commit/165b13ed31a3dbd5d819741414e5d8757c605037))
+* **Icons:** adds download icon ([0ae0d4f](https://github.com/valerio-pescatori/portfolio/commit/0ae0d4f9f7a2ad284d6c61f0627aff0304d76bbb))
+* implementing contacts section ([8697ec2](https://github.com/valerio-pescatori/portfolio/commit/8697ec24164eaa5887d10b35f88d4687bbf7f789))
+* update whoami page ([4cb6bec](https://github.com/valerio-pescatori/portfolio/commit/4cb6bec8cc8ca06c830e092b9eb27253f52f19f5))
+
+
+### Bug Fixes
+
+* fixes refresh animation bug ([d24d89a](https://github.com/valerio-pescatori/portfolio/commit/d24d89aca6b9e69f24c163954060a2c607cc112a))
+
 ## [1.1.0](https://github.com/valerio-pescatori/portfolio/compare/v1.0.0...v1.1.0) (2024-06-17)
 
 
