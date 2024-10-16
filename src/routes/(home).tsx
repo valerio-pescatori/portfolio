@@ -43,7 +43,7 @@ export default function Home() {
 			{/* Nav Section */}
 			<nav
 				aria-busy={!renderList()}
-				class="transition-all duration-300 delay-500 mt-4 sm:mt-0"
+				class="transition-opacity delay-500 mt-4 sm:mt-0"
 				classList={{
 					'opacity-0 pointer-events-none': !renderList() && !isVisited,
 				}}

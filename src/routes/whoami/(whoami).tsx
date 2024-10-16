@@ -11,7 +11,7 @@ export default function Whoami() {
 	const isVisited = useIsVisited();
 
 	const classes = (baseClass?: string) => ({
-		class: `transition-opacity duration-700 ${baseClass}`,
+		class: `transition-opacity ${baseClass}`,
 		classList: { 'opacity-0': !render() && !isVisited },
 	});
 

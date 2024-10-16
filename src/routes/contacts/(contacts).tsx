@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { createMemo, createSignal } from 'solid-js';
 import Icon from '../../components/Icon/Icon';
 import { IconsEnum } from '../../components/Icon/types/IconsEnum';
 import Typewriter from '../../components/Typewriter/Typewriter';
@@ -11,8 +11,12 @@ export default function Contacts() {
 	const { LL } = useI18nContext();
 	const isVisited = useIsVisited();
 
+	const opacityClassList = createMemo(() => ({
+		'opacity-0': !render() && !isVisited,
+	}));
+
 	return (
-		<section class="flex flex-col gap-8">
+		<section class="flex flex-col gap-16 pl-4">
 			<h1 class="text-4xl font-thin">
 				<Typewriter
 					disableAnimation={isVisited}
@@ -22,45 +26,45 @@ export default function Contacts() {
 				/>
 			</h1>
 
-			<ul
-				class="transition-opacity duration-700 delay-100 flex flex-col gap-2"
-				classList={{ 'opacity-0': !render() && !isVisited }}
+			<div
+				class="transition-opacity delay-300 flex flex-col gap-2"
+				classList={opacityClassList()}
 			>
-				<li class="flex items-center gap-4">
-					<Icon iconName={IconsEnum.GITHUB} /> -
-					<a target="blank" href="https://github.com/valerio-pescatori">
-						GitHub
-					</a>
-				</li>
-				<li class="flex items-center gap-4">
-					<Icon iconName={IconsEnum.LINKEDIN} /> -
-					<a
-						target="blank"
-						href="https://www.linkedin.com/in/valerio-pescatori/"
-					>
-						LinkedIn
-					</a>
-				</li>
-				<li class="flex items-center gap-4">
-					<Icon iconName={IconsEnum.MAIL} /> -
-					<a target="blank" href="mailto:pescatorim14@gmail.com">
-						pescatorim14@gmail.com
-					</a>
-				</li>
-			</ul>
-
-			<div class="mt-4 flex justify-center items-center">
-				<button
-					class="flex shadow-lg bg-surface0 rounded-lg pl-2 gap-2 items-center justify-center transition-all hover:scale-105 active:scale-95"
+				<ul class="flex flex-col gap-2">
+					<li class="flex items-center gap-4">
+						<Icon iconName={IconsEnum.GITHUB} />
+						<a target="blank" href="https://github.com/valerio-pescatori">
+							GitHub
+						</a>
+					</li>
+					<li class="flex items-center gap-4">
+						<Icon iconName={IconsEnum.LINKEDIN} />
+						<a
+							target="blank"
+							href="https://www.linkedin.com/in/valerio-pescatori/"
+						>
+							LinkedIn
+						</a>
+					</li>
+					<li class="flex items-center gap-4">
+						<Icon iconName={IconsEnum.MAIL} />
+						<a target="blank" href="mailto:pescatorim14@gmail.com">
+							pescatorim14@gmail.com
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="transition-opacity delay-500" classList={opacityClassList()}>
+				<a
+					class="inline-flex shadow-lg bg-surface0 rounded-lg px-6 py-2 gap-4 items-center justify-center hover:scale-105 active:scale-95"
+					aria-label="Download CV"
+					href="Valerio_Pescatori_CV.pdf"
+					download="Valerio_Pescatori_CV.pdf"
 					type="button"
 				>
-					<div class="px-4">
-						<Icon iconName={IconsEnum.FILE} />
-					</div>
-					<div class="bg-surface1 py-2 rounded-r-lg">
-						<Icon iconName={IconsEnum.CHEVRON_DOWN} />
-					</div>
-				</button>
+					<Icon iconName={IconsEnum.DOWNLOAD} />
+					Download CV
+				</a>
 			</div>
 		</section>
 	);
