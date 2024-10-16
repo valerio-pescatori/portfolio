@@ -4,4 +4,5 @@ export enum IconsEnum {
 	MAIL = 'mail',
 	FILE = 'file',
 	CHEVRON_DOWN = 'chevron_down',
+	DOWNLOAD = 'download',
 }
