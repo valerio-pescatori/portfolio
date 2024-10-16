@@ -1,5 +1,6 @@
 import { useLocation } from '@solidjs/router';
 import { onCleanup } from 'solid-js';
+import { isServer } from 'solid-js/web';
 import { routes, setRoutes } from '~/stores/routeStore';
 
 export const useIsVisited = () => {
@@ -10,5 +11,5 @@ export const useIsVisited = () => {
 		setRoutes(location.pathname, () => true);
 	});
 
-	return matchedRoute;
+	return matchedRoute && !isServer;
 };
