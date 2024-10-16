@@ -16,7 +16,7 @@ export default function Contacts() {
 	}));
 
 	return (
-		<section class="flex flex-col gap-16 pl-4">
+		<section class="flex flex-col gap-16">
 			<h1 class="text-4xl font-thin">
 				<Typewriter
 					disableAnimation={isVisited}

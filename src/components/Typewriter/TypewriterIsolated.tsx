@@ -17,7 +17,10 @@ export default function Typewriter(props: TypewriterProps) {
 
 	createEffect((prevText) => {
 		let timeouts: NodeJS.Timeout[] = [];
-		if (props.disableAnimation) return;
+		if (props.disableAnimation) {
+			props.onAnimationEnd?.();
+			return;
+		}
 		if (prevText !== props.text) {
 			setContent('');
 			timeouts.forEach(clearTimeout);

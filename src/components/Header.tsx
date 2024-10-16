@@ -6,6 +6,8 @@ import type { Locales } from '~/i18n/i18n-types';
 import { locales } from '~/i18n/i18n-util';
 import { loadLocaleAsync } from '~/i18n/i18n-util.async';
 import Dropdown from './Dropdown';
+import Icon from './Icon/Icon';
+import { IconsEnum } from './Icon/types/IconsEnum';
 
 type HeaderProps = {
 	theme: Accessor<FlavorName>;
@@ -34,8 +36,9 @@ export default function Header(props: HeaderProps) {
 	return (
 		<header class="bg-mantle flex justify-end px-4 py-2">
 			<Show when={location.pathname !== '/'}>
-				<a class="mr-auto" href="/">
-					home
+				<a class="mr-auto inline-flex items-center gap-1" href="/">
+					<Icon iconName={IconsEnum.CHEVRON_DOWN} class="rotate-90" />
+					<span>home</span>
 				</a>
 			</Show>
 			<Dropdown<FlavorName>
