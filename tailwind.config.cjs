@@ -7,6 +7,9 @@ module.exports = {
 			sans: ['SourceCodePro'],
 		},
 		extend: {
+			transitionDuration: {
+				DEFAULT: '300ms',
+			},
 			gridTemplateRows: {
 				'home-grid': '100px 50px 1fr',
 			},
