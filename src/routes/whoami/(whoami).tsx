@@ -1,9 +1,9 @@
 import { createSignal } from 'solid-js';
 import TranslateMarkdown from '~/components/TranslateMarkdown';
 import Typewriter from '~/components/Typewriter/Typewriter';
+import { typewriterFast } from '~/components/Typewriter/constants/typewriterConfigs';
 import { useI18nContext } from '~/i18n/i18n-solid';
 import { useIsVisited } from '~/utils/useIsVisited';
-import { typewriterFast } from '../../utils/typewriterConfigs';
 
 export default function Whoami() {
 	const [render, setRender] = createSignal(false);

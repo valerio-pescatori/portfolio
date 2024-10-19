@@ -1,10 +1,10 @@
 import { createMemo, createSignal } from 'solid-js';
-import Icon from '../../components/Icon/Icon';
-import { IconsEnum } from '../../components/Icon/types/IconsEnum';
-import Typewriter from '../../components/Typewriter/Typewriter';
-import { useI18nContext } from '../../i18n/i18n-solid';
-import { typewriterFast } from '../../utils/typewriterConfigs';
-import { useIsVisited } from '../../utils/useIsVisited';
+import Icon from '~/components/Icon/Icon';
+import { IconsEnum } from '~/components/Icon/types/IconsEnum';
+import Typewriter from '~/components/Typewriter/Typewriter';
+import { typewriterFast } from '~/components/Typewriter/constants/typewriterConfigs';
+import { useI18nContext } from '~/i18n/i18n-solid';
+import { useIsVisited } from '~/utils/useIsVisited';
 
 export default function Contacts() {
 	const [render, setRender] = createSignal(false);
