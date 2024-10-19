@@ -10,7 +10,11 @@
 		"attributePosition": "auto"
 	},
 	"files": {
-		"ignore": ["src/i18n/*"]
+		"ignore": [
+			"src/i18n/i18n*.ts",
+			"src/i18n/formatters.ts",
+			"src/i18n/custom-types.ts"
+		]
 	},
 	"organizeImports": { "enabled": true },
 	"linter": { "enabled": true, "rules": { "recommended": true } },
