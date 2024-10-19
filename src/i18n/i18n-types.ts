@@ -79,6 +79,54 @@ type RootTranslation = {
 		 */
 		title: string
 	}
+	thingsivedone: {
+		/**
+		 * H​e​r​e​ ​a​r​e​ ​s​o​m​e​ ​o​f​ ​m​y​ ​r​e​c​e​n​t​ ​p​r​o​j​e​c​t​s​:
+		 */
+		title: string
+		cards: {
+			'0': {
+				/**
+				 * P​o​r​t​f​o​l​i​o
+				 */
+				title: string
+				/**
+				 * u​n​a​ ​l​u​n​g​a​ ​d​e​s​c​r​i​z​i​o​n​e​ ​c​h​e​ ​r​a​c​c​o​n​t​a​ ​m​o​l​t​o​ ​b​e​n​e​ ​c​o​s​a​ ​è​ ​s​t​a​t​o​ ​f​a​t​t​o​ ​n​e​l​ ​d​e​t​t​a​g​l​i​o​ ​d​i​ ​q​u​e​s​t​o​ ​p​r​o​g​e​t​t​o​ ​d​u​r​a​t​o​ ​m​e​s​i
+				 */
+				description: string
+			}
+			'1': {
+				/**
+				 * P​o​r​t​f​o​l​i​o
+				 */
+				title: string
+				/**
+				 * u​n​a​ ​l​u​n​g​a​ ​d​e​s​c​r​i​z​i​o​n​e​ ​c​h​e​ ​r​a​c​c​o​n​t​a​ ​m​o​l​t​o​ ​b​e​n​e​ ​c​o​s​a​ ​è​ ​s​t​a​t​o​ ​f​a​t​t​o​ ​n​e​l​ ​d​e​t​t​a​g​l​i​o​ ​d​i​ ​q​u​e​s​t​o​ ​p​r​o​g​e​t​t​o​ ​d​u​r​a​t​o​ ​m​e​s​i
+				 */
+				description: string
+			}
+			'2': {
+				/**
+				 * P​o​r​t​f​o​l​i​o
+				 */
+				title: string
+				/**
+				 * u​n​a​ ​l​u​n​g​a​ ​d​e​s​c​r​i​z​i​o​n​e​ ​c​h​e​ ​r​a​c​c​o​n​t​a​ ​m​o​l​t​o​ ​b​e​n​e​ ​c​o​s​a​ ​è​ ​s​t​a​t​o​ ​f​a​t​t​o​ ​n​e​l​ ​d​e​t​t​a​g​l​i​o​ ​d​i​ ​q​u​e​s​t​o​ ​p​r​o​g​e​t​t​o​ ​d​u​r​a​t​o​ ​m​e​s​i
+				 */
+				description: string
+			}
+			'3': {
+				/**
+				 * P​o​r​t​f​o​l​i​o
+				 */
+				title: string
+				/**
+				 * u​n​a​ ​l​u​n​g​a​ ​d​e​s​c​r​i​z​i​o​n​e​ ​c​h​e​ ​r​a​c​c​o​n​t​a​ ​m​o​l​t​o​ ​b​e​n​e​ ​c​o​s​a​ ​è​ ​s​t​a​t​o​ ​f​a​t​t​o​ ​n​e​l​ ​d​e​t​t​a​g​l​i​o​ ​d​i​ ​q​u​e​s​t​o​ ​p​r​o​g​e​t​t​o​ ​d​u​r​a​t​o​ ​m​e​s​i
+				 */
+				description: string
+			}
+		}
+	}
 }
 
 export type TranslationFunctions = {
@@ -145,6 +193,54 @@ export type TranslationFunctions = {
 		 * You can find me here:
 		 */
 		title: () => LocalizedString
+	}
+	thingsivedone: {
+		/**
+		 * Here are some of my recent projects:
+		 */
+		title: () => LocalizedString
+		cards: {
+			'0': {
+				/**
+				 * Portfolio
+				 */
+				title: () => LocalizedString
+				/**
+				 * una lunga descrizione che racconta molto bene cosa è stato fatto nel dettaglio di questo progetto durato mesi
+				 */
+				description: () => LocalizedString
+			}
+			'1': {
+				/**
+				 * Portfolio
+				 */
+				title: () => LocalizedString
+				/**
+				 * una lunga descrizione che racconta molto bene cosa è stato fatto nel dettaglio di questo progetto durato mesi
+				 */
+				description: () => LocalizedString
+			}
+			'2': {
+				/**
+				 * Portfolio
+				 */
+				title: () => LocalizedString
+				/**
+				 * una lunga descrizione che racconta molto bene cosa è stato fatto nel dettaglio di questo progetto durato mesi
+				 */
+				description: () => LocalizedString
+			}
+			'3': {
+				/**
+				 * Portfolio
+				 */
+				title: () => LocalizedString
+				/**
+				 * una lunga descrizione che racconta molto bene cosa è stato fatto nel dettaglio di questo progetto durato mesi
+				 */
+				description: () => LocalizedString
+			}
+		}
 	}
 }
 
