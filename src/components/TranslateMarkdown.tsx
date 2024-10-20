@@ -1,5 +1,6 @@
 import DOMPurify from 'isomorphic-dompurify';
 import { marked } from 'marked';
+import { createMemo } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import type { LocalizedString } from 'typesafe-i18n';
 
@@ -12,15 +13,18 @@ type WrapTranslationProps = {
 
 export default function TranslateMarkdown(props: WrapTranslationProps) {
 	const as: keyof HTMLElementTagNameMap = props.as ?? 'span';
-	const parsed = marked.parseInline(props.message, {
-		async: false,
-	}) as string;
-	const message = DOMPurify.sanitize(parsed);
+
+	const message = createMemo(() => {
+		const parsed = marked.parseInline(props.message, {
+			async: false,
+		}) as string;
+		return DOMPurify.sanitize(parsed);
+	});
 
 	return (
 		<Dynamic
 			component={as}
-			innerHTML={message}
+			innerHTML={message()}
 			class={props.class}
 			classList={props.classList}
 		/>
