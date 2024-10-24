@@ -5,4 +5,5 @@ export enum IconsEnum {
 	FILE = 'file',
 	CHEVRON_DOWN = 'chevron_down',
 	DOWNLOAD = 'download',
+	CIRCLE_X = 'circle_x',
 }
