@@ -5,7 +5,7 @@ import { Dynamic } from 'solid-js/web';
 import type { LocalizedString } from 'typesafe-i18n';
 
 type WrapTranslationProps = {
-	message: LocalizedString;
+	message: LocalizedString | string;
 	as?: keyof HTMLElementTagNameMap;
 	class?: string;
 	classList?: Record<string, boolean>;
@@ -17,6 +17,8 @@ export default function TranslateMarkdown(props: WrapTranslationProps) {
 	const message = createMemo(() => {
 		const parsed = marked.parseInline(props.message, {
 			async: false,
+			gfm: true,
+			breaks: true,
 		}) as string;
 		return DOMPurify.sanitize(parsed);
 	});
