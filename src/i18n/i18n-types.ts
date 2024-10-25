@@ -84,6 +84,11 @@ type RootTranslation = {
 		 * H​e​r​e​ ​a​r​e​ ​s​o​m​e​ ​o​f​ ​m​y​ ​r​e​c​e​n​t​ ​p​r​o​j​e​c​t​s​:
 		 */
 		title: string
+		/**
+		 * C​a​r​d​ ​d​e​t​a​i​l​ ​{​t​i​t​l​e​}
+		 * @param {unknown} title
+		 */
+		dialogAriaLabel: RequiredParams<'title'>
 		cards: {
 			'0': {
 				/**
@@ -199,6 +204,10 @@ export type TranslationFunctions = {
 		 * Here are some of my recent projects:
 		 */
 		title: () => LocalizedString
+		/**
+		 * Card detail {title}
+		 */
+		dialogAriaLabel: (arg: { title: unknown }) => LocalizedString
 		cards: {
 			'0': {
 				/**

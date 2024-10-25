@@ -1,4 +1,5 @@
 import { Show, createSignal } from 'solid-js';
+import { useI18nContext } from '../i18n/i18n-solid';
 import Icon from './Icon/Icon';
 import { IconsEnum } from './Icon/types/IconsEnum';
 
@@ -9,14 +10,18 @@ export type CardProps = {
 
 export default function Card(props: CardProps) {
 	const [isActive, setIsActive] = createSignal(false);
+	const { LL } = useI18nContext();
 	let modalRef!: HTMLDivElement;
 	let buttonRef!: HTMLButtonElement; // TODO: turn into dialog
+	let backdropRef!: HTMLDivElement;
 
 	const openCard = () => {
 		// switch to fixed
 		setIsActive(true);
 		// adjust top and left to match the current position,
 		const rect = buttonRef.getBoundingClientRect();
+		backdropRef.classList.toggle('bg-black/40');
+		backdropRef.classList.toggle('bg-black/0');
 		modalRef.setAttribute(
 			'style',
 			`top: ${rect.top}px; bottom: ${rect.bottom}; left: ${rect.left}px; width: ${rect.width}px; height: ${rect.height}px`,
@@ -34,6 +39,8 @@ export default function Card(props: CardProps) {
 	const closeCard = () => {
 		// resize the modal to match the button
 		const rect = buttonRef.getBoundingClientRect();
+		backdropRef.classList.toggle('bg-black/40');
+		backdropRef.classList.toggle('bg-black/0');
 		modalRef.setAttribute(
 			'style',
 			`top: ${rect.top}px; bottom: ${rect.bottom}; left: ${rect.left}px; translate: 0; width: ${rect.width}px; height: ${rect.height}px`,
@@ -43,7 +50,7 @@ export default function Card(props: CardProps) {
 			// remove the style and switch to absolute
 			modalRef.removeAttribute('style');
 			setIsActive(false);
-		}, 300);
+		}, 500);
 	};
 
 	const cardBody = () => (
@@ -51,7 +58,11 @@ export default function Card(props: CardProps) {
 			<h2 class="text-lg border-b w-full border-surface1 p-4 flex justify-between">
 				{props.title}
 				<Show when={isActive()}>
-					<button type="button" onClick={closeCard}>
+					<button
+						type="button"
+						class="hover:ring-opacity-100 focus:ring-opacity-100 transition-shadow ring-opacity-0 ring-1 ring-mauve rounded-full size-6"
+						onClick={closeCard}
+					>
 						<Icon iconName={IconsEnum.CIRCLE_X} />
 					</button>
 				</Show>
@@ -63,30 +74,45 @@ export default function Card(props: CardProps) {
 	);
 
 	const baseStyle =
-		'bg-surface0 rounded-lg border border-surface1 transition-all';
+		'bg-surface0 rounded-lg border border-surface1 transition-all duration-500';
 
-	// TODO: ADD BACKDROP, DISABLE BTN CLICK WHILE THE MODAL IS CLOSING, ADD CLICK EVT LISTENER TO CLOSE THE MODAL WHEN CLICKING OUTSIDE
 	return (
 		<div class={`${baseStyle} shadow-2xl relative`}>
 			<button
 				aria-hidden={isActive()}
 				ref={buttonRef}
-				class="text-start"
+				class="text-start hover:ring-opacity-100 focus:ring-opacity-100 transition-shadow ring-1 ring-opacity-0 ring-mauve rounded-lg"
 				type="button"
 				onClick={openCard}
 			>
 				{cardBody()}
 			</button>
+
+			{/* modal (backdrop) */}
 			<div
 				aria-hidden={!isActive()}
-				ref={modalRef}
-				class={baseStyle}
+				ref={backdropRef}
+				role="dialog"
+				aria-modal
+				aria-label={LL().thingsivedone.dialogAriaLabel({ title: props.title })} // TODO: i18n questo titolo
+				class="transition-colors fixed top-0 left-0"
 				classList={{
-					'absolute top-0 left-0 size-full pointer-events-none': !isActive(),
-					'fixed z-10': isActive(),
+					'size-0 opacity-0 pointer-events-none': !isActive(),
+					'z-10 w-screen h-screen ': isActive(),
 				}}
 			>
-				{cardBody()}
+				{/* modal (body) */}
+				<div
+					aria-hidden={!isActive()}
+					class={`${baseStyle} opacity-100`}
+					classList={{
+						'absolute top-0 left-0 size-full': !isActive(),
+						fixed: isActive(),
+					}}
+					ref={modalRef}
+				>
+					{cardBody()}
+				</div>
 			</div>
 		</div>
 	);

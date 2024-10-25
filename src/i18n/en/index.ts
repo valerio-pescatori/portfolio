@@ -25,6 +25,7 @@ const en = {
 	},
 	thingsivedone: {
 		title: 'Here are some of my recent projects:',
+		dialogAriaLabel: 'Card detail: {title}',
 		cards: [
 			{
 				title: 'Portfolio',
