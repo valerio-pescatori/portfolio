@@ -2,6 +2,7 @@ import { Show, createSignal } from 'solid-js';
 import { useI18nContext } from '../i18n/i18n-solid';
 import Icon from './Icon/Icon';
 import { IconsEnum } from './Icon/types/IconsEnum';
+import TranslateMarkdown from './TranslateMarkdown';
 
 export type CardProps = {
 	title: string;
@@ -53,9 +54,9 @@ export default function Card(props: CardProps) {
 		}, 500);
 	};
 
-	const cardBody = () => (
+	const cardBody = (shouldExpand = false) => (
 		<>
-			<h2 class="text-lg border-b w-full border-surface1 p-4 flex justify-between">
+			<h2 class="text-lg border-b w-full border-surface1 p-4 flex justify-between ">
 				{props.title}
 				<Show when={isActive()}>
 					<button
@@ -67,9 +68,14 @@ export default function Card(props: CardProps) {
 					</button>
 				</Show>
 			</h2>
-			<div class="px-4 pt-2 pb-4">
-				<p>{props.description}</p>
-			</div>
+			<TranslateMarkdown
+				class="px-4 pt-2 min-h-12"
+				classList={{
+					'max-h-28 overflow-hidden': !isActive() || !shouldExpand,
+				}}
+				message={props.description}
+				as="p"
+			/>
 		</>
 	);
 
@@ -81,7 +87,7 @@ export default function Card(props: CardProps) {
 			<button
 				aria-hidden={isActive()}
 				ref={buttonRef}
-				class="text-start hover:ring-opacity-100 focus:ring-opacity-100 transition-shadow ring-1 ring-opacity-0 ring-mauve rounded-lg"
+				class="text-start hover:ring-opacity-100 focus:ring-opacity-100 transition-shadow ring-1 ring-opacity-0 ring-mauve rounded-lg w-full align-top"
 				type="button"
 				onClick={openCard}
 			>
@@ -104,14 +110,14 @@ export default function Card(props: CardProps) {
 				{/* modal (body) */}
 				<div
 					aria-hidden={!isActive()}
-					class={`${baseStyle} opacity-100`}
+					class={`${baseStyle} opacity-100 overflow-auto`}
 					classList={{
 						'absolute top-0 left-0 size-full': !isActive(),
 						fixed: isActive(),
 					}}
 					ref={modalRef}
 				>
-					{cardBody()}
+					{cardBody(true)}
 				</div>
 			</div>
 		</div>
