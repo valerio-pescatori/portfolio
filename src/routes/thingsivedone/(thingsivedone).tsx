@@ -1,4 +1,4 @@
-import { For, createSignal } from 'solid-js';
+import { For, createMemo, createSignal } from 'solid-js';
 import Card from '../../components/Card';
 import Typewriter from '../../components/Typewriter/TypewriterIsolated';
 import { typewriterFast } from '../../components/Typewriter/constants/typewriterConfigs';
