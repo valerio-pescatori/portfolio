@@ -1,63 +1,78 @@
-import { Show, createSignal } from 'solid-js';
+import { type Accessor, type JSX, Show, createSignal } from 'solid-js';
+import type { LocalizedString } from 'typesafe-i18n';
 import { useI18nContext } from '../i18n/i18n-solid';
 import Icon from './Icon/Icon';
 import { IconsEnum } from './Icon/types/IconsEnum';
 import TranslateMarkdown from './TranslateMarkdown';
 
 export type CardProps = {
-	title: string;
-	description: string;
+	title: Accessor<LocalizedString>;
+	description: Accessor<LocalizedString>;
 };
 
 export default function Card(props: CardProps) {
 	const [isActive, setIsActive] = createSignal(false);
+	const [style, setStyle] = createSignal<JSX.CSSProperties>({});
 	const { LL } = useI18nContext();
 	let modalRef!: HTMLDivElement;
 	let buttonRef!: HTMLButtonElement; // TODO: turn into dialog
 	let backdropRef!: HTMLDivElement;
 
 	const openCard = () => {
+		// add backdrop
+		backdropRef.classList.toggle('bg-black/40');
+		backdropRef.classList.toggle('bg-black/0');
+
 		// switch to fixed
 		setIsActive(true);
 		// adjust top and left to match the current position,
 		const rect = buttonRef.getBoundingClientRect();
-		backdropRef.classList.toggle('bg-black/40');
-		backdropRef.classList.toggle('bg-black/0');
-		modalRef.setAttribute(
-			'style',
-			`top: ${rect.top}px; bottom: ${rect.bottom}; left: ${rect.left}px; width: ${rect.width}px; height: ${rect.height}px`,
-		);
-		// request animation frame
+		setStyle({
+			top: `${rect.top}px`,
+			left: `${rect.left}px`,
+			width: `${rect.width}px`,
+			height: `${rect.height}px`,
+		});
+
 		// then set the new top, left, width and height
-		requestAnimationFrame(() => {
-			modalRef.setAttribute(
-				'style',
-				'top: 2rem; left: 50%; translate: -50% 0; width: 60vw; height: 90vh',
-			);
+		setTimeout(() => {
+			setStyle({
+				translate: '-50%',
+				top: '2rem',
+				left: '50%',
+				width: '60vw',
+				height: '90vh',
+			});
 		});
 	};
 
 	const closeCard = () => {
-		// resize the modal to match the button
-		const rect = buttonRef.getBoundingClientRect();
+		// remove backdrop
 		backdropRef.classList.toggle('bg-black/40');
 		backdropRef.classList.toggle('bg-black/0');
-		modalRef.setAttribute(
-			'style',
-			`top: ${rect.top}px; bottom: ${rect.bottom}; left: ${rect.left}px; translate: 0; width: ${rect.width}px; height: ${rect.height}px`,
-		);
+
+		// resize the modal to match the button
+		const rect = buttonRef.getBoundingClientRect();
+		setStyle({
+			translate: 0,
+			top: `${rect.top}px`,
+			left: `${rect.left}px`,
+			width: `${rect.width}px`,
+			height: `${rect.height}px`,
+		});
+
 		// setTimeout to wait for the transition to finish
 		setTimeout(() => {
 			// remove the style and switch to absolute
-			modalRef.removeAttribute('style');
+			setStyle({});
 			setIsActive(false);
 		}, 500);
 	};
 
-	const cardBody = (shouldExpand = false) => (
+	const cardBody = (shouldOverflow = false) => (
 		<>
-			<h2 class="text-lg border-b w-full border-surface1 p-4 flex justify-between ">
-				{props.title}
+			<h2 class="text-lg border-b w-full border-surface1 p-4 flex justify-between">
+				{props.title()}
 				<Show when={isActive()}>
 					<button
 						type="button"
@@ -71,9 +86,9 @@ export default function Card(props: CardProps) {
 			<TranslateMarkdown
 				class="px-4 pt-2 min-h-12"
 				classList={{
-					'max-h-28 overflow-hidden': !isActive() || !shouldExpand,
+					'max-h-28 overflow-hidden': !isActive() || !shouldOverflow,
 				}}
-				message={props.description}
+				message={props.description()}
 				as="p"
 			/>
 		</>
@@ -100,7 +115,9 @@ export default function Card(props: CardProps) {
 				ref={backdropRef}
 				role="dialog"
 				aria-modal
-				aria-label={LL().thingsivedone.dialogAriaLabel({ title: props.title })} // TODO: i18n questo titolo
+				aria-label={LL().thingsivedone.dialogAriaLabel({
+					title: props.title(),
+				})}
 				class="transition-colors fixed top-0 left-0"
 				classList={{
 					'size-0 opacity-0 pointer-events-none': !isActive(),
@@ -116,6 +133,7 @@ export default function Card(props: CardProps) {
 						fixed: isActive(),
 					}}
 					ref={modalRef}
+					style={style()}
 				>
 					{cardBody(true)}
 				</div>

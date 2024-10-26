@@ -1,7 +1,7 @@
 import type { BaseTranslation } from '../i18n-types.js';
 
 const en = {
-	hi: "Hi, I'm {name:string} :)",
+	hi: "Hi, I'm {name: string} :)",
 	about: 'What do you want to know about me?',
 	list: {
 		whoAmI: 'Who are you?',
@@ -25,7 +25,7 @@ const en = {
 	},
 	thingsivedone: {
 		title: 'Here are some of my recent projects:',
-		dialogAriaLabel: 'Card detail: {title}',
+		dialogAriaLabel: 'Card detail: {title: string}',
 		cards: [
 			{
 				title: 'Portfolio',

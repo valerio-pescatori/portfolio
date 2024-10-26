@@ -10,7 +10,7 @@ export default function ThingsIveDone() {
 	const isVisited = useIsVisited();
 	const [isClickable, setIsClickable] = createSignal(false);
 
-	const cards = Object.values(LL().thingsivedone.cards);
+	const cards = createMemo(() => Object.values(LL().thingsivedone.cards));
 
 	return (
 		<section>
@@ -26,10 +26,8 @@ export default function ThingsIveDone() {
 				class="my-16 relative flex flex-col gap-8 transition-opacity delay-300"
 				classList={{ 'pointer-events-none opacity-0': !isClickable() }}
 			>
-				<For each={cards}>
-					{(card) => (
-						<Card title={card.title()} description={card.description()} />
-					)}
+				<For each={cards()}>
+					{(card) => <Card title={card.title} description={card.description} />}
 				</For>
 			</div>
 		</section>

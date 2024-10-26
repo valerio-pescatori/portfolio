@@ -5,7 +5,7 @@ import { Dynamic } from 'solid-js/web';
 import type { LocalizedString } from 'typesafe-i18n';
 
 type WrapTranslationProps = {
-	message: LocalizedString | string;
+	message: LocalizedString;
 	as?: keyof HTMLElementTagNameMap;
 	class?: string;
 	classList?: Record<string, boolean>;
