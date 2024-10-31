@@ -4,6 +4,7 @@ import {
 	type Setter,
 	Show,
 	children,
+	createSignal,
 } from 'solid-js';
 import type { LocalizedString } from 'typesafe-i18n';
 import Icon from './Icon/Icon';
@@ -16,18 +17,23 @@ export type ModalProps = ParentProps<{
 }>;
 
 export default function Modal(props: ModalProps) {
+	const [overflowClass, setOverflowClass] = createSignal<
+		'overflow-auto' | 'overflow-hidden'
+	>('overflow-hidden');
+
 	return (
 		<Show when={props.isOpen()}>
-			<div class="fixed inset-0 bg-black/40 pointer-events-none z-50 transition-colors starting:bg-black/0 duration-700">
+			<div class="fixed inset-0 bg-black/40 z-50 transition-colors starting:bg-black/0 duration-700">
 				<dialog
 					open={props.isOpen()}
+					onTransitionEnd={() => setOverflowClass('overflow-auto')}
 					class={`
 						fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
-						flex flex-col pointer-events-auto 
+						flex flex-col text-text
 						w-11/12 md:w-4/6 h-5/6 starting:h-16 
 						bg-surface0 rounded-lg border border-overlay2 
 						transition-all duration-700
-						text-text`}
+						`}
 				>
 					{/* title */}
 					<h2 class="text-lg border-b w-full border-overlay2 p-4 flex justify-between">
@@ -35,13 +41,16 @@ export default function Modal(props: ModalProps) {
 						<button
 							type="button"
 							class="hover:ring-opacity-100 focus:ring-opacity-100 transition-shadow ring-opacity-0 ring-1 ring-mauve rounded-full size-6"
-							onClick={() => props.setIsOpen(false)}
+							onClick={() => {
+								props.setIsOpen(false);
+								setOverflowClass('overflow-hidden');
+							}}
 						>
 							<Icon iconName={IconsEnum.CIRCLE_X} />
 						</button>
 					</h2>
 					{/* body */}
-					<div class="p-4 overflow-auto">
+					<div class={`p-4 ${overflowClass()}`}>
 						{children(() => props.children)()}
 					</div>
 				</dialog>
