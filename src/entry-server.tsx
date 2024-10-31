@@ -1,15 +1,13 @@
 // @refresh reload
-import type { FlavorName } from '@catppuccin/palette';
 import { StartServer, createHandler } from '@solidjs/start/server';
 import { detectLocale } from 'typesafe-i18n/detectors';
 import { locales } from './i18n/i18n-util';
+import { DEFAULT_THEME } from './stores/themeStore';
 import { handleDefaultCookie } from './utils/handleDefaultCookie';
-
-const DEFAULT_THEME: FlavorName = 'mocha';
 
 export default createHandler((event) => {
 	const lang = handleDefaultCookie('lang', detectLocale('en', locales), event);
-	handleDefaultCookie('theme', DEFAULT_THEME, event);
+	const theme = handleDefaultCookie('theme', DEFAULT_THEME, event);
 
 	// default theme preference, reduced motion
 	// const evt = getRequestEvent();
@@ -23,7 +21,7 @@ export default createHandler((event) => {
 	return (
 		<StartServer
 			document={({ assets, children, scripts }) => (
-				<html lang={lang}>
+				<html lang={lang} class={theme}>
 					<head>
 						<title>Valerio Pescatori - Frontend Engineer</title>
 						<meta

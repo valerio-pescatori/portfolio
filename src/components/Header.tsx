@@ -1,20 +1,16 @@
 import { type FlavorName, flavors } from '@catppuccin/palette';
 import { useLocation } from '@solidjs/router';
-import { type Accessor, type Setter, Show } from 'solid-js';
+import { Show } from 'solid-js';
 import { useI18nContext } from '~/i18n/i18n-solid';
 import type { Locales } from '~/i18n/i18n-types';
 import { locales } from '~/i18n/i18n-util';
 import { loadLocaleAsync } from '~/i18n/i18n-util.async';
+import { setTheme, theme } from '~/stores/themeStore';
 import Dropdown from './Dropdown';
 import Icon from './Icon/Icon';
 import { IconsEnum } from './Icon/types/IconsEnum';
 
-type HeaderProps = {
-	theme: Accessor<FlavorName>;
-	setTheme: Setter<FlavorName>;
-};
-
-export default function Header(props: HeaderProps) {
+export default function Header() {
 	const { locale, setLocale } = useI18nContext();
 	const location = useLocation();
 
@@ -27,7 +23,7 @@ export default function Header(props: HeaderProps) {
 	};
 
 	const switchTheme = (newTheme: FlavorName) => {
-		props.setTheme(newTheme);
+		setTheme(newTheme);
 		document.cookie = `theme=${newTheme}; Max-Age ${
 			1000 * 60 * 60 * 24 * 30 * 12
 		}`;
@@ -46,7 +42,7 @@ export default function Header(props: HeaderProps) {
 					value: f as FlavorName,
 					label: f,
 				}))}
-				label={props.theme}
+				label={theme}
 				class="mr-4"
 				onSelectItem={switchTheme}
 			/>

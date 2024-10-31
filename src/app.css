@@ -15,6 +15,14 @@
 		@apply bg-overlay0 rounded-full;
 	}
 
+	::-webkit-scrollbar-corner {
+		display: none;
+	}
+
+	::-webkit-scrollbar-button {
+		display: none;
+	}
+
 	@font-face {
 		font-family: "SourceCodePro";
 		src: local("SourceCodePro"), url("/SourceCodePro.ttf");
