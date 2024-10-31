@@ -16,14 +16,14 @@ export default function ThingsIveDone() {
 		<section>
 			<h1 class="text-2xl md:text-4xl font-thin">
 				<Typewriter
-					disableAnimation={isVisited}
+					disableAnimation={true}
 					text={LL().thingsivedone.title()}
 					drawCharRandomness={typewriterFast}
 					onAnimationEnd={() => setIsClickable(true)}
 				/>
 			</h1>
 			<div
-				class="my-16 relative flex flex-col gap-8 transition-opacity delay-300"
+				class="my-16 flex flex-col gap-8 transition-opacity delay-300"
 				classList={{ 'pointer-events-none opacity-0': !isClickable() }}
 			>
 				<For each={cards()}>

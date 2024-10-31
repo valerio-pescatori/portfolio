@@ -11,10 +11,17 @@ module.exports = {
 				DEFAULT: '300ms',
 			},
 			gridTemplateRows: {
+				'1fr': '1fr',
+				'0fr': '0fr',
 				'home-grid': '100px 50px 1fr',
 			},
 		},
 	},
-	plugins: [require('@catppuccin/tailwindcss')],
+	plugins: [
+		require('@catppuccin/tailwindcss'),
+		({ addVariant }) => {
+			addVariant('starting', '@starting-style');
+		},
+	],
 	safelist: [...Object.keys(flavors)],
 };
