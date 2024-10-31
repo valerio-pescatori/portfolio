@@ -28,9 +28,9 @@ export default function Modal(props: ModalProps) {
 					open={props.isOpen()}
 					onTransitionEnd={() => setOverflowClass('overflow-auto')}
 					class={`
-						fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+						fixed left-1/2 top-12 -translate-x-1/2
 						flex flex-col text-text
-						w-11/12 md:w-4/6 h-5/6 starting:h-16 
+						w-11/12 lg:w-4/6 h-5/6 starting:h-16 
 						bg-surface0 rounded-lg border border-overlay2 
 						transition-all duration-700
 						`}
