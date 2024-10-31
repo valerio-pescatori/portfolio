@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.3.0](https://github.com/valerio-pescatori/portfolio/compare/v1.2.0...v1.3.0) (2024-10-31)
+
+
+### Features
+
+* **Card:** adds gradient to hide overflowing text ([2307a7b](https://github.com/valerio-pescatori/portfolio/commit/2307a7b6d0379af846bd165e26394ee640f33dc0))
+* **Card:** implements modal open/close behavior ([36accb8](https://github.com/valerio-pescatori/portfolio/commit/36accb87dd4d7d672bee2822da339b56d4ba1ab2))
+* **Card:** implements open/close functionality ([99af5db](https://github.com/valerio-pescatori/portfolio/commit/99af5db6e4c19ecf5ff65b403c3917fe7ad1b0b0))
+* **components:** adds Modal component ([5834fb2](https://github.com/valerio-pescatori/portfolio/commit/5834fb2450fe3b6ed2fbce1bb41089b75a405dcc))
+* implements Card component ([48a21ad](https://github.com/valerio-pescatori/portfolio/commit/48a21ad416865a6552e10c92c9b9bc377e0ab1db))
+* thingsivedone page ([e6b2c49](https://github.com/valerio-pescatori/portfolio/commit/e6b2c49a1888bc6d6f49901945db454f5e226f93))
+* **TranslateMarkdown:** enables multiline messages ([9627546](https://github.com/valerio-pescatori/portfolio/commit/9627546c294482b5d53fb9c7cfdca3513a7c2008))
+* **whoami:** adding cards content ([503b134](https://github.com/valerio-pescatori/portfolio/commit/503b1348e37318a12f028e6f503a28ced00e0725))
+
+
+### Bug Fixes
+
+* **Card:** minor fixes ([5479c20](https://github.com/valerio-pescatori/portfolio/commit/5479c204971ff4255f17eadc99292f718f73c79b))
+
 ## [1.2.0](https://github.com/valerio-pescatori/portfolio/compare/v1.1.0...v1.2.0) (2024-10-16)
 
 
