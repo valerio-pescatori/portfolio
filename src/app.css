@@ -8,6 +8,10 @@
 		scrollbar-width: thin;
 		scrollbar-color: rgb(var(--ctp-overlay0)) rgb(var(--ctp-base));
 	}
+
+	*:focus-visible {
+		outline: none;
+	}
 	
 	::-webkit-scrollbar {
 		@apply w-1 bg-base rounded-full;
