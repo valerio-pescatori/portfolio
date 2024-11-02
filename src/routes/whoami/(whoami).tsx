@@ -42,7 +42,11 @@ export default function Whoami() {
 
 			<p {...classes('delay-500')}>{LL().whoami.par3()}</p>
 
-			<ul {...classes('list-inside list-disc transition-opacity delay-1000')}>
+			<ul
+				{...classes(
+					'list-inside list-disc transition-opacity delay-1000 pb-10',
+				)}
+			>
 				<li>Typescript</li>
 				<li>React 18</li>
 				<li>Vite</li>
