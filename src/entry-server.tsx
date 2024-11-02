@@ -21,7 +21,7 @@ export default createHandler((event) => {
 	return (
 		<StartServer
 			document={({ assets, children, scripts }) => (
-				<html lang={lang} class={theme}>
+				<html lang={lang} class={`${theme} overscroll-none`}>
 					<head>
 						<title>Valerio Pescatori - Frontend Engineer</title>
 						<meta
