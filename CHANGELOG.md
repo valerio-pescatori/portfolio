@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.1](https://github.com/valerio-pescatori/portfolio/compare/v1.3.0...v1.3.1) (2024-11-02)
+
+
+### Bug Fixes
+
+* removes overscroll ([4c1d83a](https://github.com/valerio-pescatori/portfolio/commit/4c1d83ab8c4248b30a9143326156530ad57b5f76))
+* **scrollbar:** fixes scrollbar style on firefox ([c29df2a](https://github.com/valerio-pescatori/portfolio/commit/c29df2adce726828dfdb47502b399d109983deae))
+* **whoami:** fixes padding bottom ([e5a68d5](https://github.com/valerio-pescatori/portfolio/commit/e5a68d5ad81278202e92fd83736a2dfdebddb5f6))
+
 ## [1.3.0](https://github.com/valerio-pescatori/portfolio/compare/v1.2.0...v1.3.0) (2024-10-31)
 
 
