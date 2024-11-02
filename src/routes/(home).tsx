@@ -28,6 +28,7 @@ export default function Home() {
 			<Show when={renderSub()} fallback={<span aria-busy />}>
 				<h2 class="text-subtext1">
 					<Typewriter
+						showCursor={false}
 						disableAnimation={isVisited}
 						text={LL().about()}
 						onAnimationEnd={() => {
