@@ -5,6 +5,8 @@
 @layer base {
 	* {
 		outline: none;
+		scrollbar-width: thin;
+		scrollbar-color: rgb(var(--ctp-overlay0)) rgb(var(--ctp-base));
 	}
 	
 	::-webkit-scrollbar {
