@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/valerio-pescatori/portfolio/compare/v1.3.1...v1.4.0) (2024-11-02)
+
+
+### Features
+
+* **Typewriter:** adds blinking cursor effect ([323ba03](https://github.com/valerio-pescatori/portfolio/commit/323ba0317a597039295293976f09b843dbf622e7))
+
+
+### Bug Fixes
+
+* **style:** fixes outline on firefox ([2956386](https://github.com/valerio-pescatori/portfolio/commit/29563866e86a545faf1a4492265b55dcc54e79c6))
+
 ## [1.3.1](https://github.com/valerio-pescatori/portfolio/compare/v1.3.0...v1.3.1) (2024-11-02)
 
 
