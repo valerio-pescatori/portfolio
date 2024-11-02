@@ -24,7 +24,7 @@ const en = {
 		title: 'You can find me here:',
 	},
 	thingsivedone: {
-		title: 'Here are some of my recent projects:',
+		title: 'Here are some of my recent projects',
 		dialogAriaLabel: 'Card detail: {title: string}',
 		cards: [
 			{

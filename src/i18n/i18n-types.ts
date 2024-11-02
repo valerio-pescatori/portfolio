@@ -81,7 +81,7 @@ type RootTranslation = {
 	}
 	thingsivedone: {
 		/**
-		 * H​e​r​e​ ​a​r​e​ ​s​o​m​e​ ​o​f​ ​m​y​ ​r​e​c​e​n​t​ ​p​r​o​j​e​c​t​s​:
+		 * H​e​r​e​ ​a​r​e​ ​s​o​m​e​ ​o​f​ ​m​y​ ​r​e​c​e​n​t​ ​p​r​o​j​e​c​t​s
 		 */
 		title: string
 		/**
@@ -243,7 +243,7 @@ export type TranslationFunctions = {
 	}
 	thingsivedone: {
 		/**
-		 * Here are some of my recent projects:
+		 * Here are some of my recent projects
 		 */
 		title: () => LocalizedString
 		/**
