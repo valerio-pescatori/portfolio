@@ -1,6 +1,6 @@
 import { type FlavorName, flavors } from '@catppuccin/palette';
-import { useLocation } from '@solidjs/router';
-import { Show } from 'solid-js';
+import { useLocation, useNavigate } from '@solidjs/router';
+import { Show, createEffect, onCleanup } from 'solid-js';
 import { useI18nContext } from '~/i18n/i18n-solid';
 import type { Locales } from '~/i18n/i18n-types';
 import { locales } from '~/i18n/i18n-util';
@@ -12,6 +12,7 @@ import { IconsEnum } from './Icon/types/IconsEnum';
 
 export default function Header() {
 	const { locale, setLocale } = useI18nContext();
+	const navigate = useNavigate();
 	const location = useLocation();
 
 	const switchLocale = async (newLocale: Locales) => {
@@ -28,6 +29,18 @@ export default function Header() {
 			1000 * 60 * 60 * 24 * 30 * 12
 		}`;
 	};
+
+	createEffect(() => {
+		function handleKeyDown(e: KeyboardEvent) {
+			if (e.key === 'Backspace') navigate('/');
+		}
+
+		addEventListener('keydown', handleKeyDown);
+
+		onCleanup(() => {
+			removeEventListener('keydown', handleKeyDown);
+		});
+	});
 
 	return (
 		<header class="bg-mantle flex justify-end px-4 py-2">

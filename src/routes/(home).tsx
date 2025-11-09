@@ -1,4 +1,5 @@
-import { Show, createEffect, createSignal } from 'solid-js';
+import { useNavigate } from '@solidjs/router';
+import { Show, createEffect, createSignal, onCleanup } from 'solid-js';
 import Typewriter from '~/components/Typewriter/Typewriter';
 import { useI18nContext } from '~/i18n/i18n-solid';
 import type { Locales } from '~/i18n/i18n-types';
@@ -9,10 +10,33 @@ export default function Home() {
 	const [renderSub, setRenderSub] = createSignal(false);
 	const [renderList, setRenderList] = createSignal(false);
 	const isVisited = useIsVisited();
+	const navigate = useNavigate();
 
 	createEffect<Locales>((prevLocale) => {
 		if (prevLocale !== locale()) setRenderSub(false);
 		return locale();
+	});
+
+	createEffect(() => {
+		function handleKeyDown(e: KeyboardEvent) {
+			switch (e.key) {
+				case '1':
+					navigate('/whoami');
+					break;
+				case '2':
+					navigate('/contacts');
+					break;
+				case '3':
+					navigate('/thingsivedone');
+					break;
+			}
+		}
+
+		addEventListener('keydown', handleKeyDown);
+
+		onCleanup(() => {
+			removeEventListener('keydown', handleKeyDown);
+		});
 	});
 
 	return (
