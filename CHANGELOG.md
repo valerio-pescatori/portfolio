@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/valerio-pescatori/portfolio/compare/v1.4.0...v1.5.0) (2025-11-09)
+
+
+### Features
+
+* adds keyboard navigation ([d91635d](https://github.com/valerio-pescatori/portfolio/commit/d91635d7e806601274c7ae09b980637f55859f42))
+
+
+### Bug Fixes
+
+* **Typewriter:** fixes lang change bug ([d23df5b](https://github.com/valerio-pescatori/portfolio/commit/d23df5b4727480a7389244034a056a2e7175abe1))
+
 ## [1.4.0](https://github.com/valerio-pescatori/portfolio/compare/v1.3.1...v1.4.0) (2024-11-02)
 
 
