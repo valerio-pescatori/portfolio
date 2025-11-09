@@ -15,10 +15,10 @@ const en = {
 		testPostfix: ' :)',
 	},
 	whoami: {
-		title: "I'm Valerio Pescatori and I work as a Frontend Engineer",
-		par1: "Child of the web, _always_ been passionate about Computer Science and programming. Earned my Bachelor's Degree in Computer Science from _Sapienza University of Rome_.",
-		par2: 'During my studies I had the chance to learn a lot and to develop a _"scientific"_ approach that I use on a daily basis to solve techincal problems, to build __scalable__, __user-friendly__ and __efficient__ architectures.',
-		par3: "I've been working for Accenture for the past 2 years: I worked on various large-scale projects taking technical decisions and implementing new features. Among the tool I've used the most important are:",
+		title: 'My name is Valerio Pescatori and I am a Frontend Engineer',
+		par1: "Passionate about computer science and programming from an early age, I earned a Bachelor's Degree in Computer Science from _Sapienza, University of Rome_, building a solid technical and methodological foundation.",
+		par2: 'My academic journey enabled me to develop a _"scientific"_ approach to solving technical problems and designing __scalable__, __user-friendly__, and __efficient__ architectures, with particular attention to code quality and best practices.',
+		par3: 'At Accenture, I gained two years of experience on large-scale enterprise projects, taking responsibility for technical and architectural decisions, coordinating with teams, and implementing critical features. Among the main tools I used:',
 	},
 	contacts: {
 		title: 'You can find me here:',

@@ -23,7 +23,7 @@ export const generateActions = async (
 	let isComplete = false;
 	let currentStr = '';
 	const typoRate = drawCharRandomness?.typoRate ?? 0.2;
-	const maxTimeout = drawCharRandomness?.maxTimeout ?? 250;
+	const maxTimeout = drawCharRandomness?.maxTimeout ?? 300;
 	const deleteTimeoutMultiplier =
 		drawCharRandomness?.deleteTimeoutMultiplier ?? 1.2;
 
@@ -42,11 +42,7 @@ export const generateActions = async (
 		if (isError && typo) {
 			const typoChar = typo[Math.floor(Math.random() * typo.length)];
 			const typoTime = Math.random() * maxTimeout * deleteTimeoutMultiplier;
-			const correctionTime =
-				Math.random() *
-				maxTimeout *
-				deleteTimeoutMultiplier *
-				deleteTimeoutMultiplier;
+			const correctionTime = typoTime * deleteTimeoutMultiplier;
 
 			// first action: error
 			actions.push({

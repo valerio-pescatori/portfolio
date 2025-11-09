@@ -57,19 +57,19 @@ type RootTranslation = {
 	}
 	whoami: {
 		/**
-		 * I​'​m​ ​V​a​l​e​r​i​o​ ​P​e​s​c​a​t​o​r​i​ ​a​n​d​ ​I​ ​w​o​r​k​ ​a​s​ ​a​ ​F​r​o​n​t​e​n​d​ ​E​n​g​i​n​e​e​r
+		 * M​y​ ​n​a​m​e​ ​i​s​ ​V​a​l​e​r​i​o​ ​P​e​s​c​a​t​o​r​i​ ​a​n​d​ ​I​ ​a​m​ ​a​ ​F​r​o​n​t​e​n​d​ ​E​n​g​i​n​e​e​r
 		 */
 		title: string
 		/**
-		 * C​h​i​l​d​ ​o​f​ ​t​h​e​ ​w​e​b​,​ ​_​a​l​w​a​y​s​_​ ​b​e​e​n​ ​p​a​s​s​i​o​n​a​t​e​ ​a​b​o​u​t​ ​C​o​m​p​u​t​e​r​ ​S​c​i​e​n​c​e​ ​a​n​d​ ​p​r​o​g​r​a​m​m​i​n​g​.​ ​E​a​r​n​e​d​ ​m​y​ ​B​a​c​h​e​l​o​r​'​s​ ​D​e​g​r​e​e​ ​i​n​ ​C​o​m​p​u​t​e​r​ ​S​c​i​e​n​c​e​ ​f​r​o​m​ ​_​S​a​p​i​e​n​z​a​ ​U​n​i​v​e​r​s​i​t​y​ ​o​f​ ​R​o​m​e​_​.
+		 * P​a​s​s​i​o​n​a​t​e​ ​a​b​o​u​t​ ​c​o​m​p​u​t​e​r​ ​s​c​i​e​n​c​e​ ​a​n​d​ ​p​r​o​g​r​a​m​m​i​n​g​ ​f​r​o​m​ ​a​n​ ​e​a​r​l​y​ ​a​g​e​,​ ​I​ ​e​a​r​n​e​d​ ​a​ ​B​a​c​h​e​l​o​r​'​s​ ​D​e​g​r​e​e​ ​i​n​ ​C​o​m​p​u​t​e​r​ ​S​c​i​e​n​c​e​ ​f​r​o​m​ ​_​S​a​p​i​e​n​z​a​,​ ​U​n​i​v​e​r​s​i​t​y​ ​o​f​ ​R​o​m​e​_​,​ ​b​u​i​l​d​i​n​g​ ​a​ ​s​o​l​i​d​ ​t​e​c​h​n​i​c​a​l​ ​a​n​d​ ​m​e​t​h​o​d​o​l​o​g​i​c​a​l​ ​f​o​u​n​d​a​t​i​o​n​.
 		 */
 		par1: string
 		/**
-		 * D​u​r​i​n​g​ ​m​y​ ​s​t​u​d​i​e​s​ ​I​ ​h​a​d​ ​t​h​e​ ​c​h​a​n​c​e​ ​t​o​ ​l​e​a​r​n​ ​a​ ​l​o​t​ ​a​n​d​ ​t​o​ ​d​e​v​e​l​o​p​ ​a​ ​_​"​s​c​i​e​n​t​i​f​i​c​"​_​ ​a​p​p​r​o​a​c​h​ ​t​h​a​t​ ​I​ ​u​s​e​ ​o​n​ ​a​ ​d​a​i​l​y​ ​b​a​s​i​s​ ​t​o​ ​s​o​l​v​e​ ​t​e​c​h​i​n​c​a​l​ ​p​r​o​b​l​e​m​s​,​ ​t​o​ ​b​u​i​l​d​ ​_​_​s​c​a​l​a​b​l​e​_​_​,​ ​_​_​u​s​e​r​-​f​r​i​e​n​d​l​y​_​_​ ​a​n​d​ ​_​_​e​f​f​i​c​i​e​n​t​_​_​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​.
+		 * M​y​ ​a​c​a​d​e​m​i​c​ ​j​o​u​r​n​e​y​ ​e​n​a​b​l​e​d​ ​m​e​ ​t​o​ ​d​e​v​e​l​o​p​ ​a​ ​_​"​s​c​i​e​n​t​i​f​i​c​"​_​ ​a​p​p​r​o​a​c​h​ ​t​o​ ​s​o​l​v​i​n​g​ ​t​e​c​h​n​i​c​a​l​ ​p​r​o​b​l​e​m​s​ ​a​n​d​ ​d​e​s​i​g​n​i​n​g​ ​_​_​s​c​a​l​a​b​l​e​_​_​,​ ​_​_​u​s​e​r​-​f​r​i​e​n​d​l​y​_​_​,​ ​a​n​d​ ​_​_​e​f​f​i​c​i​e​n​t​_​_​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​,​ ​w​i​t​h​ ​p​a​r​t​i​c​u​l​a​r​ ​a​t​t​e​n​t​i​o​n​ ​t​o​ ​c​o​d​e​ ​q​u​a​l​i​t​y​ ​a​n​d​ ​b​e​s​t​ ​p​r​a​c​t​i​c​e​s​.
 		 */
 		par2: string
 		/**
-		 * I​'​v​e​ ​b​e​e​n​ ​w​o​r​k​i​n​g​ ​f​o​r​ ​A​c​c​e​n​t​u​r​e​ ​f​o​r​ ​t​h​e​ ​p​a​s​t​ ​2​ ​y​e​a​r​s​:​ ​I​ ​w​o​r​k​e​d​ ​o​n​ ​v​a​r​i​o​u​s​ ​l​a​r​g​e​-​s​c​a​l​e​ ​p​r​o​j​e​c​t​s​ ​t​a​k​i​n​g​ ​t​e​c​h​n​i​c​a​l​ ​d​e​c​i​s​i​o​n​s​ ​a​n​d​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​n​e​w​ ​f​e​a​t​u​r​e​s​.​ ​A​m​o​n​g​ ​t​h​e​ ​t​o​o​l​ ​I​'​v​e​ ​u​s​e​d​ ​t​h​e​ ​m​o​s​t​ ​i​m​p​o​r​t​a​n​t​ ​a​r​e​:
+		 * A​t​ ​A​c​c​e​n​t​u​r​e​,​ ​I​ ​g​a​i​n​e​d​ ​t​w​o​ ​y​e​a​r​s​ ​o​f​ ​e​x​p​e​r​i​e​n​c​e​ ​o​n​ ​l​a​r​g​e​-​s​c​a​l​e​ ​e​n​t​e​r​p​r​i​s​e​ ​p​r​o​j​e​c​t​s​,​ ​t​a​k​i​n​g​ ​r​e​s​p​o​n​s​i​b​i​l​i​t​y​ ​f​o​r​ ​t​e​c​h​n​i​c​a​l​ ​a​n​d​ ​a​r​c​h​i​t​e​c​t​u​r​a​l​ ​d​e​c​i​s​i​o​n​s​,​ ​c​o​o​r​d​i​n​a​t​i​n​g​ ​w​i​t​h​ ​t​e​a​m​s​,​ ​a​n​d​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​c​r​i​t​i​c​a​l​ ​f​e​a​t​u​r​e​s​.​ ​A​m​o​n​g​ ​t​h​e​ ​m​a​i​n​ ​t​o​o​l​s​ ​I​ ​u​s​e​d​:
 		 */
 		par3: string
 	}
@@ -219,19 +219,19 @@ export type TranslationFunctions = {
 	}
 	whoami: {
 		/**
-		 * I'm Valerio Pescatori and I work as a Frontend Engineer
+		 * My name is Valerio Pescatori and I am a Frontend Engineer
 		 */
 		title: () => LocalizedString
 		/**
-		 * Child of the web, _always_ been passionate about Computer Science and programming. Earned my Bachelor's Degree in Computer Science from _Sapienza University of Rome_.
+		 * Passionate about computer science and programming from an early age, I earned a Bachelor's Degree in Computer Science from _Sapienza, University of Rome_, building a solid technical and methodological foundation.
 		 */
 		par1: () => LocalizedString
 		/**
-		 * During my studies I had the chance to learn a lot and to develop a _"scientific"_ approach that I use on a daily basis to solve techincal problems, to build __scalable__, __user-friendly__ and __efficient__ architectures.
+		 * My academic journey enabled me to develop a _"scientific"_ approach to solving technical problems and designing __scalable__, __user-friendly__, and __efficient__ architectures, with particular attention to code quality and best practices.
 		 */
 		par2: () => LocalizedString
 		/**
-		 * I've been working for Accenture for the past 2 years: I worked on various large-scale projects taking technical decisions and implementing new features. Among the tool I've used the most important are:
+		 * At Accenture, I gained two years of experience on large-scale enterprise projects, taking responsibility for technical and architectural decisions, coordinating with teams, and implementing critical features. Among the main tools I used:
 		 */
 		par3: () => LocalizedString
 	}

@@ -16,9 +16,9 @@ const it = {
 	},
 	whoami: {
 		title: 'Mi chiamo Valerio Pescatori e sono un Frontend Engineer',
-		par1: 'Figlio del web, sono _sempre_ stato appassionato di informatica e programamzione. Ho conseguito una Laurea Triennale in Informatica presso _Sapienza, Università di Roma_.',
-		par2: 'Durante il mio persorso di studi ho imparato molto e ho avuto modo di sviluppare ed un approccio _"scientifico"_ alla risoluzione dei problemi tecnici, alla realizzazione di un\'architettura in ottica __scalabile__, __user-friendly__ ed __efficiente__.',
-		par3: 'Ho lavorato per Accenture per due anni: ho partecipato a diversi progetti di grandi dimensioni prendendo decisioni tecniche e architetturali, implementando nuove funzionalità. Tra i tool che ho utilizato di più ci sono:',
+		par1: 'Appassionato di informatica e programmazione fin da piccolo, ho conseguito una Laurea Triennale in Informatica presso _Sapienza, Università di Roma_, costruendo solide fondamenta tecniche e metodologiche.',
+		par2: 'Il mio percorso di studi mi ha permesso di sviluppare un approccio _"scientifico"_ alla risoluzione dei problemi tecnici e alla progettazione di architetture __scalabili__, __user-friendly__ ed __efficienti__, con particolare attenzione alla qualità del codice e alle best practice.',
+		par3: "In Accenture ho maturato due anni di esperienza su progetti enterprise di grande complessità, assumendo responsabilità nella definizione di scelte tecniche e architetturali, nel coordinamento con i team e nell'implementazione di funzionalità critiche. Tra i principali tool utilizzati:",
 	},
 	contacts: {
 		title: 'Puoi trovarmi qui:',
