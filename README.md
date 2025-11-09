@@ -1,32 +1,43 @@
-# SolidStart
+# 🌐 valeriopescatori.dev
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+Sito personale di **Valerio Pescatori**, Frontend Engineer.  
+Realizzato con un approccio moderno e _developer-friendly_, utilizzando **SolidStart**, **TypeScript**, e un ecosistema di tool che garantisce qualità, coerenza e automazione del flusso di sviluppo.
 
-## Creating a project
+## 🚀 Tech Stack
 
-```bash
-# create a new project in the current directory
-npm init solid@latest
+- ⚛️ **[SolidStart](https://start.solidjs.com/)** — framework web full-stack basato su SolidJS
+- 🌍 **[typesafe-i18n](https://github.com/ivanhofer/typesafe-i18n)** — localizzazione typesafe
+- 🎨 **[Tailwind CSS](https://tailwindcss.com/)** — design system utility-first
+- 🧹 **[Biome](https://biomejs.dev/)** — linting, formatting e type-checking unificati
+- 🔧 **[Lefthook](https://github.com/evilmartians/lefthook)** — gestione degli hook Git per CI locale
+- 📝 **[commitlint](https://commitlint.js.org/)** — validazione dei messaggi di commit secondo convenzioni semantiche
+- 🚢 **[release-please](https://github.com/googleapis/release-please)** — gestione automatica di changelog e release
 
-# create a new project in my-app
-npm init solid@latest my-app
-```
+## 🧩 Funzionalità principali
 
-## Developing
+- **Internazionalizzazione typesafe** con supporto multilingua
+- **Build ottimizzata** e deploy continuo su **Vercel**
+- **Linting e formatting automatici** tramite Biome e Lefthook
+- **Changelog e versioning automatico** con release-please
+- **Comandi Git protetti** da commitlint e hook pre-commit
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 🧰 Workflow di sviluppo
 
-```bash
-npm run dev
+- Tutti i commit seguono la convenzione **[Conventional Commits](https://www.conventionalcommits.org/)** per garantire chiarezza e automazione nel versionamento.
+- Gli hook gestiti da **Lefthook** eseguono controlli automatici su lint, test e formattazione prima di ogni commit o push.
+- Le release vengono generate automaticamente da **release-please**, che aggiorna la versione del progetto e crea un changelog coerente.
+- Il deploy è completamente automatizzato su **Vercel**, con build ottimizzate tramite **SolidStart**.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## 📦 Deploy
 
-## Building
+Il progetto è ospitato su **[Vercel](https://vercel.com/)**.  
+Ogni merge sul branch `main` attiva una nuova build e il deploy automatico in produzione.
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+## 🧑‍💻 Autore
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
+**Valerio Pescatori**  
+Frontend Engineer
 
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+- 🌐 [valeriopescatori.dev](https://valerio-pescatori.vercel.app/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/valerio-pescatori/)
+- 🐙 [GitHub](https://github.com/valerio-pescatori)
