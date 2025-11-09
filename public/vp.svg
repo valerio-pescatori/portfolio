@@ -1,0 +1,6 @@
+<svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Logo VP">
+  <circle cx="50" cy="50" r="50" fill="#11111b"></circle>
+  <circle cx="50" cy="50" r="45" fill="none" stroke="#b4befe" stroke-width="3"></circle>
+  <text style="fill: rgb(205, 214, 244); font-family: Verdana, Geneva, sans-serif; font-size: 62px; font-weight: 700; white-space: pre;" x="45.279" y="74.712">P</text>
+  <text style="color: rgb(0, 0, 0); fill: rgb(203, 166, 247); font-family: Verdana, Geneva, sans-serif; font-size: 62px; font-weight: 700; white-space: pre;" x="13.266" y="74.712">V</text>
+</svg>
