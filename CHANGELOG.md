@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/valerio-pescatori/portfolio/compare/v1.5.0...v1.6.0) (2025-12-23)
+
+
+### Features
+
+* adds png logo ([3e6b77c](https://github.com/valerio-pescatori/portfolio/commit/3e6b77c42013c344c0443a7c5168d7574623f9ef))
+* update favicon ([e066246](https://github.com/valerio-pescatori/portfolio/commit/e066246db2357255de3ef88bc41aab464ebfe21b))
+
 ## [1.5.0](https://github.com/valerio-pescatori/portfolio/compare/v1.4.0...v1.5.0) (2025-11-09)
 
 
