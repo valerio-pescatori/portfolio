@@ -44,19 +44,17 @@ const it = {
 				`,
 			},
 			{
-				title: 'Impostor Game',
+				title: 'Portfolio Next.js multilingua per tatuatore',
 				description: `
-				Si tratta di un (apparentemente) semplice gioco mobile/desktop da giocare in compagnia: uno tra i giocatori sarà l'impostore e gli altri dovranno scoprirlo ponendosi domande a vicena.
+				Ho realizzato un sito portfolio in Next.js (App Router) con pagine principali e sezioni dedicate (home, portfolio, prenotazione).
 				
-				Per la realizzazione insieme a due amici abbiamo deciso di sperimentare un nuovo framework chiamato **Tauri**, il quale permette di sviluppare applicazioni cross-device (sia mobile che desktop) integrando un qualsiasi framework in grado di generare HTML, CSS e JavaScript.
+				Ho integrato l’internazionalizzazione con routing per lingua e file di traduzione (IT/EN) mantenendo layout e contenuti coerenti.
 				
-				Nel nostro caso abbiamo optato per **SvelteKit** con **Svelte 5**, per testare le novità introdotte in quest'ultima versione, tra cui ovviamente le runes.
+				Ho curato componenti UI riusabili (header, testi/link animati, carousel) e la gestione delle immagini del portfolio.
 				
-				Per quanto riguarda lo stile abbiamo scelto **TailwindCSS 4** (anche se ancora in versione alpha), anche qui per toccare con mano le nuove funzionalità tra cui la config basata interamente su variabili CSS.
+				Ho impostato basi SEO tecniche (sitemap/robots) e utilità di supporto (hook, throttle, gestione locale) per performance e manutenibilità.
 				
-				Non può mancare anche qui **Lefthook** accompagnato da **Eslint** e **Prettier**.
-				
-				Questo progetto non è open-source, ma sarà disponibile sugli app store android e iOS appena terminati gli sviluppi.
+				Il progetto è disponibile *[su GitHub](https://github.com/valerio-pescatori/nat-portfolio)* e online *[su nat-tatss.ink](https://www.nat-tatss.ink/)*.
 				`,
 			},
 			{

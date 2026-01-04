@@ -43,19 +43,18 @@ const en = {
 				The project is open-source and available on my *[GitHub](https://github.com/valerio-pescatori/portfolio)* :).`,
 			},
 			{
-				title: 'Impostor Game',
+				title: 'Multilingual Next.js portfolio website for a tattoo artist',
 				description: `
-				It’s an (apparently) simple mobile/desktop game to be played with friends: one player will be the impostor, and the others will need to figure it out by asking each other questions in turn.
-
-				To develop it, two friends and I decided to experiment with a new framework called **Tauri**, which allows cross-device application development (both mobile and desktop) by integrating any framework capable of generating HTML, CSS, and JavaScript.
-
-				In our case, we chose **SvelteKit** with **Svelte** 5 to test the new features introduced in this latest version, including, of course, runes.
-
-				For styling, we opted for **TailwindCSS 4** (still in alpha version), once again to experience its new features, including the CSS variable-based configuration.
-
-				Here, too, **Lefthook** is used alongside **ESLint** and **Prettier**.
-
-				This project is not open-source, but it will be available on android and iOS app stores once development is complete.`,
+				I built a portfolio website in Next.js (App Router) with the main pages and dedicated sections (home, portfolio, booking).
+				
+				I implemented internationalization with locale-based routing and translation files (EN/IT), keeping layout and content consistent across languages.
+				
+				I developed reusable UI components (header, animated text/links, carousel) and handled the portfolio image gallery.
+				
+				I set up basic technical SEO (sitemap/robots) and supporting utilities (hooks, throttle, locale helpers) to improve performance and maintainability.
+				
+				The project is available *[on GitHub](https://github.com/valerio-pescatori/nat-portfolio)* and live *[at nat-tatss.ink](https://www.nat-tatss.ink/)*.
+				`,
 			},
 			{
 				title: 'Galaxy Generator',

@@ -113,22 +113,21 @@ type RootTranslation = {
 			}
 			'1': {
 				/**
-				 * I​m​p​o​s​t​o​r​ ​G​a​m​e
+				 * M​u​l​t​i​l​i​n​g​u​a​l​ ​N​e​x​t​.​j​s​ ​p​o​r​t​f​o​l​i​o​ ​w​e​b​s​i​t​e​ ​f​o​r​ ​a​ ​t​a​t​t​o​o​ ​a​r​t​i​s​t
 				 */
 				title: string
 				/**
 				 * 
-			​	​	​	​	​I​t​’​s​ ​a​n​ ​(​a​p​p​a​r​e​n​t​l​y​)​ ​s​i​m​p​l​e​ ​m​o​b​i​l​e​/​d​e​s​k​t​o​p​ ​g​a​m​e​ ​t​o​ ​b​e​ ​p​l​a​y​e​d​ ​w​i​t​h​ ​f​r​i​e​n​d​s​:​ ​o​n​e​ ​p​l​a​y​e​r​ ​w​i​l​l​ ​b​e​ ​t​h​e​ ​i​m​p​o​s​t​o​r​,​ ​a​n​d​ ​t​h​e​ ​o​t​h​e​r​s​ ​w​i​l​l​ ​n​e​e​d​ ​t​o​ ​f​i​g​u​r​e​ ​i​t​ ​o​u​t​ ​b​y​ ​a​s​k​i​n​g​ ​e​a​c​h​ ​o​t​h​e​r​ ​q​u​e​s​t​i​o​n​s​ ​i​n​ ​t​u​r​n​.​
-			​
-			​	​	​	​	​T​o​ ​d​e​v​e​l​o​p​ ​i​t​,​ ​t​w​o​ ​f​r​i​e​n​d​s​ ​a​n​d​ ​I​ ​d​e​c​i​d​e​d​ ​t​o​ ​e​x​p​e​r​i​m​e​n​t​ ​w​i​t​h​ ​a​ ​n​e​w​ ​f​r​a​m​e​w​o​r​k​ ​c​a​l​l​e​d​ ​*​*​T​a​u​r​i​*​*​,​ ​w​h​i​c​h​ ​a​l​l​o​w​s​ ​c​r​o​s​s​-​d​e​v​i​c​e​ ​a​p​p​l​i​c​a​t​i​o​n​ ​d​e​v​e​l​o​p​m​e​n​t​ ​(​b​o​t​h​ ​m​o​b​i​l​e​ ​a​n​d​ ​d​e​s​k​t​o​p​)​ ​b​y​ ​i​n​t​e​g​r​a​t​i​n​g​ ​a​n​y​ ​f​r​a​m​e​w​o​r​k​ ​c​a​p​a​b​l​e​ ​o​f​ ​g​e​n​e​r​a​t​i​n​g​ ​H​T​M​L​,​ ​C​S​S​,​ ​a​n​d​ ​J​a​v​a​S​c​r​i​p​t​.​
-			​
-			​	​	​	​	​I​n​ ​o​u​r​ ​c​a​s​e​,​ ​w​e​ ​c​h​o​s​e​ ​*​*​S​v​e​l​t​e​K​i​t​*​*​ ​w​i​t​h​ ​*​*​S​v​e​l​t​e​*​*​ ​5​ ​t​o​ ​t​e​s​t​ ​t​h​e​ ​n​e​w​ ​f​e​a​t​u​r​e​s​ ​i​n​t​r​o​d​u​c​e​d​ ​i​n​ ​t​h​i​s​ ​l​a​t​e​s​t​ ​v​e​r​s​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​,​ ​o​f​ ​c​o​u​r​s​e​,​ ​r​u​n​e​s​.​
-			​
-			​	​	​	​	​F​o​r​ ​s​t​y​l​i​n​g​,​ ​w​e​ ​o​p​t​e​d​ ​f​o​r​ ​*​*​T​a​i​l​w​i​n​d​C​S​S​ ​4​*​*​ ​(​s​t​i​l​l​ ​i​n​ ​a​l​p​h​a​ ​v​e​r​s​i​o​n​)​,​ ​o​n​c​e​ ​a​g​a​i​n​ ​t​o​ ​e​x​p​e​r​i​e​n​c​e​ ​i​t​s​ ​n​e​w​ ​f​e​a​t​u​r​e​s​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​C​S​S​ ​v​a​r​i​a​b​l​e​-​b​a​s​e​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.​
-			​
-			​	​	​	​	​H​e​r​e​,​ ​t​o​o​,​ ​*​*​L​e​f​t​h​o​o​k​*​*​ ​i​s​ ​u​s​e​d​ ​a​l​o​n​g​s​i​d​e​ ​*​*​E​S​L​i​n​t​*​*​ ​a​n​d​ ​*​*​P​r​e​t​t​i​e​r​*​*​.​
-			​
-			​	​	​	​	​T​h​i​s​ ​p​r​o​j​e​c​t​ ​i​s​ ​n​o​t​ ​o​p​e​n​-​s​o​u​r​c​e​,​ ​b​u​t​ ​i​t​ ​w​i​l​l​ ​b​e​ ​a​v​a​i​l​a​b​l​e​ ​o​n​ ​a​n​d​r​o​i​d​ ​a​n​d​ ​i​O​S​ ​a​p​p​ ​s​t​o​r​e​s​ ​o​n​c​e​ ​d​e​v​e​l​o​p​m​e​n​t​ ​i​s​ ​c​o​m​p​l​e​t​e​.
+			​	​	​	​	​I​ ​b​u​i​l​t​ ​a​ ​p​o​r​t​f​o​l​i​o​ ​w​e​b​s​i​t​e​ ​i​n​ ​N​e​x​t​.​j​s​ ​(​A​p​p​ ​R​o​u​t​e​r​)​ ​w​i​t​h​ ​t​h​e​ ​m​a​i​n​ ​p​a​g​e​s​ ​a​n​d​ ​d​e​d​i​c​a​t​e​d​ ​s​e​c​t​i​o​n​s​ ​(​h​o​m​e​,​ ​p​o​r​t​f​o​l​i​o​,​ ​b​o​o​k​i​n​g​)​.​
+			​	​	​	​	​
+			​	​	​	​	​I​ ​i​m​p​l​e​m​e​n​t​e​d​ ​i​n​t​e​r​n​a​t​i​o​n​a​l​i​z​a​t​i​o​n​ ​w​i​t​h​ ​l​o​c​a​l​e​-​b​a​s​e​d​ ​r​o​u​t​i​n​g​ ​a​n​d​ ​t​r​a​n​s​l​a​t​i​o​n​ ​f​i​l​e​s​ ​(​E​N​/​I​T​)​,​ ​k​e​e​p​i​n​g​ ​l​a​y​o​u​t​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​c​o​n​s​i​s​t​e​n​t​ ​a​c​r​o​s​s​ ​l​a​n​g​u​a​g​e​s​.​
+			​	​	​	​	​
+			​	​	​	​	​I​ ​d​e​v​e​l​o​p​e​d​ ​r​e​u​s​a​b​l​e​ ​U​I​ ​c​o​m​p​o​n​e​n​t​s​ ​(​h​e​a​d​e​r​,​ ​a​n​i​m​a​t​e​d​ ​t​e​x​t​/​l​i​n​k​s​,​ ​c​a​r​o​u​s​e​l​)​ ​a​n​d​ ​h​a​n​d​l​e​d​ ​t​h​e​ ​p​o​r​t​f​o​l​i​o​ ​i​m​a​g​e​ ​g​a​l​l​e​r​y​.​
+			​	​	​	​	​
+			​	​	​	​	​I​ ​s​e​t​ ​u​p​ ​b​a​s​i​c​ ​t​e​c​h​n​i​c​a​l​ ​S​E​O​ ​(​s​i​t​e​m​a​p​/​r​o​b​o​t​s​)​ ​a​n​d​ ​s​u​p​p​o​r​t​i​n​g​ ​u​t​i​l​i​t​i​e​s​ ​(​h​o​o​k​s​,​ ​t​h​r​o​t​t​l​e​,​ ​l​o​c​a​l​e​ ​h​e​l​p​e​r​s​)​ ​t​o​ ​i​m​p​r​o​v​e​ ​p​e​r​f​o​r​m​a​n​c​e​ ​a​n​d​ ​m​a​i​n​t​a​i​n​a​b​i​l​i​t​y​.​
+			​	​	​	​	​
+			​	​	​	​	​T​h​e​ ​p​r​o​j​e​c​t​ ​i​s​ ​a​v​a​i​l​a​b​l​e​ ​*​[​o​n​ ​G​i​t​H​u​b​]​(​h​t​t​p​s​:​/​/​g​i​t​h​u​b​.​c​o​m​/​v​a​l​e​r​i​o​-​p​e​s​c​a​t​o​r​i​/​n​a​t​-​p​o​r​t​f​o​l​i​o​)​*​ ​a​n​d​ ​l​i​v​e​ ​*​[​a​t​ ​n​a​t​-​t​a​t​s​s​.​i​n​k​]​(​h​t​t​p​s​:​/​/​w​w​w​.​n​a​t​-​t​a​t​s​s​.​i​n​k​/​)​*​.​
+			​	​	​	​
 				 */
 				description: string
 			}
@@ -274,22 +273,21 @@ export type TranslationFunctions = {
 			}
 			'1': {
 				/**
-				 * Impostor Game
+				 * Multilingual Next.js portfolio website for a tattoo artist
 				 */
 				title: () => LocalizedString
 				/**
 				 * 
-							It’s an (apparently) simple mobile/desktop game to be played with friends: one player will be the impostor, and the others will need to figure it out by asking each other questions in turn.
-		
-							To develop it, two friends and I decided to experiment with a new framework called **Tauri**, which allows cross-device application development (both mobile and desktop) by integrating any framework capable of generating HTML, CSS, and JavaScript.
-		
-							In our case, we chose **SvelteKit** with **Svelte** 5 to test the new features introduced in this latest version, including, of course, runes.
-		
-							For styling, we opted for **TailwindCSS 4** (still in alpha version), once again to experience its new features, including the CSS variable-based configuration.
-		
-							Here, too, **Lefthook** is used alongside **ESLint** and **Prettier**.
-		
-							This project is not open-source, but it will be available on android and iOS app stores once development is complete.
+							I built a portfolio website in Next.js (App Router) with the main pages and dedicated sections (home, portfolio, booking).
+						
+							I implemented internationalization with locale-based routing and translation files (EN/IT), keeping layout and content consistent across languages.
+						
+							I developed reusable UI components (header, animated text/links, carousel) and handled the portfolio image gallery.
+						
+							I set up basic technical SEO (sitemap/robots) and supporting utilities (hooks, throttle, locale helpers) to improve performance and maintainability.
+						
+							The project is available *[on GitHub](https://github.com/valerio-pescatori/nat-portfolio)* and live *[at nat-tatss.ink](https://www.nat-tatss.ink/)*.
+						
 				 */
 				description: () => LocalizedString
 			}
