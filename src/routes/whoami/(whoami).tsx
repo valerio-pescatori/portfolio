@@ -1,7 +1,6 @@
 import { createSignal } from 'solid-js';
 import TranslateMarkdown from '~/components/TranslateMarkdown';
 import Typewriter from '~/components/Typewriter/Typewriter';
-import { typewriterFast } from '~/components/Typewriter/constants/typewriterConfigs';
 import { useI18nContext } from '~/i18n/i18n-solid';
 import { useIsVisited } from '~/utils/useIsVisited';
 
@@ -21,7 +20,6 @@ export default function Whoami() {
 				<Typewriter
 					disableAnimation={isVisited}
 					text={LL().whoami.title()}
-					drawCharRandomness={typewriterFast}
 					onAnimationEnd={() => {
 						setRender(true);
 					}}

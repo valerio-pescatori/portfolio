@@ -1,4 +1,5 @@
 import { Show, createEffect, createSignal, onCleanup } from 'solid-js';
+import { typewriterFast } from './constants/typewriterConfigs';
 import type { DrawCharRandomness } from './types/DrawCharRandomness';
 import { generateActions } from './utils/generateActions';
 import { sleep } from './utils/sleep';
@@ -15,7 +16,7 @@ export default function Typewriter(props: TypewriterProps) {
 	const [content, setContent] = createSignal('');
 	const [showCursor, setShowCursor] = createSignal(false);
 	const [actions, setActions] = createSignal(
-		generateActions(props.text, props.drawCharRandomness),
+		generateActions(props.text, props.drawCharRandomness ?? typewriterFast),
 	);
 	props.showCursor ??= true;
 	let timeout: NodeJS.Timeout | null = null;

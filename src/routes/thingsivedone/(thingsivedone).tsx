@@ -1,7 +1,6 @@
 import { For, createMemo, createSignal } from 'solid-js';
 import Typewriter from '~/components/Typewriter/Typewriter';
 import Card from '../../components/Card';
-import { typewriterFast } from '../../components/Typewriter/constants/typewriterConfigs';
 import { useI18nContext } from '../../i18n/i18n-solid';
 import { useIsVisited } from '../../utils/useIsVisited';
 
@@ -18,7 +17,6 @@ export default function ThingsIveDone() {
 				<Typewriter
 					disableAnimation={isVisited}
 					text={LL().thingsivedone.title()}
-					drawCharRandomness={typewriterFast}
 					onAnimationEnd={() => setIsClickable(true)}
 				/>
 			</h1>
