@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.7.0](https://github.com/valerio-pescatori/portfolio/compare/v1.6.0...v1.7.0) (2026-02-14)
+
+
+### Features
+
+* update cv ([9331f2b](https://github.com/valerio-pescatori/portfolio/commit/9331f2bc4b6d4f5eea3da348ac7cbcddfcbb0867))
+* update cv ([2e487fd](https://github.com/valerio-pescatori/portfolio/commit/2e487fd12735152baad2cf8d6410d92b7e9d4e6f))
+* update cv ([5cea22f](https://github.com/valerio-pescatori/portfolio/commit/5cea22f55e9d1e3509929d481a51d2e1342cbac8))
+* updates /thingsivedone ([f36b160](https://github.com/valerio-pescatori/portfolio/commit/f36b1606873577eb7e14f9bf75f8a760b464c457))
+
 ## [1.6.0](https://github.com/valerio-pescatori/portfolio/compare/v1.5.0...v1.6.0) (2025-12-23)
 
 
